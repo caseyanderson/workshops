@@ -6,6 +6,8 @@
 
 [Laughing Furniture](http://www.metacafe.com/watch/mv-EsVn/evil_dead_ii_evil_furniture), evil dead 2
 
+[Ikea Lamp Commercial](https://www.youtube.com/watch?v=dBqhIVyfsRg)
+
 [Animism and Interaction Design](http://www.philvanallen.com/animism-interaction-design/), phil van allen
 
 [The Macguffin Library](http://noamtoran.com/NT2009/projects/the-macguffin-library), noam toran
