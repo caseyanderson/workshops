@@ -279,3 +279,8 @@ void loop() {
   delay(1);        // delay in between reads for stability            
 }
 ```
+
+### Servos
+
+We are going to move our objects around with one servo, a motor that can be electrically controlled to move to previse points along a plane. If you want to read about how servos work, here is a pretty good, and general, [wikipedia](https://en.wikipedia.org/wiki/Servomechanism) article on servos.
+```
