@@ -330,3 +330,7 @@ Here is a very generic diagram showing the basic wiring pattern for a Servo cont
 Alternately, here is another version of the above image (done in [Fritzing](http://fritzing.org/home/), which is a pretty cool software program, by the way):
 
 ![sweep_bb.png](sweep_bb.png?raw=true)
+
+What is important to notice is that both of the above images convey the exact same information. This is something to learn to get used to: reading through/past the style that the information (the same in either case) if presented in.
+
+So, really all we have to do is attach pin 1 on the servo to ```5V``` on the arduino, pin 2 on the servo to ```pin 9```, and pin 3 on the servo to ```GND```. Go ahead and do that (with a breadboard or without), upload the code to the Arduino board, and watch your servo sweep from 0 to 180 degrees and back. I know this is not super exciting on its own, but its an important demonstration of the way that you use servos. Analyze the code you sent to the Arduino. What is each line doing and how could you change it to create different behaviors?
