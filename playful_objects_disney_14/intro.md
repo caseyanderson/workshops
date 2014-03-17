@@ -10,6 +10,8 @@
 
 [Animism and Interaction Design](http://www.philvanallen.com/animism-interaction-design/), phil van allen
 
+[Addicted products: The Story of Brad the Toaster](http://www.wired.com/design/2014/03/addicted-products/)
+
 [The Macguffin Library](http://noamtoran.com/NT2009/projects/the-macguffin-library), noam toran
 
 [Desire Management](http://noamtoran.com/NT2009/projects/desire-management), noam toran
