@@ -1,5 +1,5 @@
 # Intro to Arduino
-*Media Design Practices, 2/12/14, Casey Anderson*
+*Summer 2014, Casey Anderson*
 
 note: unless otherwise noted, these examples come packaged with the arduino software
 
