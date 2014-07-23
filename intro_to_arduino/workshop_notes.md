@@ -1,5 +1,7 @@
-#intro to arduino
-*Disney, Casey Anderson*
+# Intro to Arduino
+*Media Design Practices, 2/12/14, Casey Anderson*
+
+note: unless otherwise noted, these examples come packaged with the arduino software
 
 ### The Electronics
 (assumes usage of the Arduino Uno)
@@ -279,58 +281,3 @@ void loop() {
   delay(1);        // delay in between reads for stability            
 }
 ```
-
-### Servos
-
-We are going to move our objects around with one servo, a motor that can be electrically controlled to move to previse points along a plane. If you want to read about how servos work, here is a pretty good, and general, [wikipedia](https://en.wikipedia.org/wiki/Servomechanism) article on servos.
-
-Arduino has a specific library written for Servo usage which you can reference as you are learning to work with servos [here](http://arduino.cc/en/Reference/Servo#.UxUHXvRdViY).
-
-Here is a basic example of one way to use a servo:
-```
-// Sweep
-// by BARRAGAN <http://barraganstudio.com> 
-// This example code is in the public domain.
-
-
-#include <Servo.h> 
- 
-Servo myservo;  // create servo object to control a servo 
-                // a maximum of eight servo objects can be created 
- 
-int pos = 0;    // variable to store the servo position 
- 
-void setup() 
-{ 
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object 
-} 
- 
- 
-void loop() 
-{ 
-  for(pos = 0; pos < 180; pos += 1)  // goes from 0 degrees to 180 degrees 
-  {                                  // in steps of 1 degree 
-    myservo.write(pos);              // tell servo to go to position in variable 'pos' 
-    delay(15);                       // waits 15ms for the servo to reach the position 
-  } 
-  for(pos = 180; pos>=1; pos-=1)     // goes from 180 degrees to 0 degrees 
-  {                                
-    myservo.write(pos);              // tell servo to go to position in variable 'pos' 
-    delay(15);                       // waits 15ms for the servo to reach the position 
-  } 
-}
-```
-
-Copy the code above into an arduino window, and lets turn our attention to hooking the servo up to the motor.
-
-Here is a very generic diagram showing the basic wiring pattern for a Servo controlled by an Arduino:
-
-![sweep_schem.png](sweep_schem.png?raw=true)
-
-Alternately, here is another version of the above image (done in [Fritzing](http://fritzing.org/home/), which is a pretty cool software program, by the way):
-
-![sweep_bb.png](sweep_bb.png?raw=true)
-
-What is important to notice is that both of the above images convey the exact same information. This is something to learn to get used to: reading through/past the style that the information (the same in either case) if presented in.
-
-So, really all we have to do is attach pin 1 on the servo to ```5V``` on the arduino, pin 2 on the servo to ```pin 9```, and pin 3 on the servo to ```GND```. Go ahead and do that (with a breadboard or without), upload the code to the Arduino board, and watch your servo sweep from 0 to 180 degrees and back. I know this is not super exciting on its own, but its an important demonstration of the way that you use servos. Analyze the code you sent to the Arduino. What is each line doing and how could you change it to create different behaviors?
