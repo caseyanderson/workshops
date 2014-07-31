@@ -1,18 +1,22 @@
-Note: Let's say you do not use iPython, and prefer to use Python in the command line as installed via OSX. Good news for you! The only thing you will need to change throughout this tutorial is the install code (i.e. instead of ipython setup.py install, you can just type python setup.py install [this did not require the sudo command on my machine]).
-<br/><i>step one</i>
+# Python to Supercollider
+*Summer 2014, Casey Anderson*
+
+*Note: Let's say you do not use iPython, and prefer to use Python in the command line as installed via OSX. Good news for you! The only thing you will need to change throughout this tutorial is the install code (i.e. instead of ipython setup.py install, you can just type python setup.py install).
+## step one
 Go <a href="http://supercollider.sourceforge.net/downloads/">here</a> to download SuperCollider (the latest version is fine...FYI, I do not use the new IDE, so its possible that the GUI layout I am describing is different). We are going to focus on some very simple applications in SC, but if you are curious to read more about how it works, I would recommend checking out the <a href="http://supercollider.sourceforge.net/wiki/">wiki</a> and/or the <a href="http://supercolliderbook.net/">SC Book</a> (alternately, if you find yourself swept off your feet by SC, you should sign up for the mailing list [warning: hundreds of emails a day...]), which will eventually function as a help database that lives in your email. You can search the mailing list via google, but I think that is more of a pain in the ass than doing so in GMail, for example. Once your download is complete, go ahead and install the program.
-<br/><i>step two</i>
+
+## step two
 We are going to use <a href="http://opensoundcontrol.org/introduction-osc">Open Sound Control</a> to talk to SuperCollider via iPython, so we are going to need a Python Module in order to facilitate that connection. Open Sound Control (or OSC for short) is a network-based protocol to allow for communications between multiple computers or multiple programs on the same computer (among other things). We are basically going to use SuperCollider as our audio engine and Python as our controller (which parallels the division between control data and sound data that one would see in Modular Synthesizers). There are lots of uses for OSC, but we are going to focus on just one.
 <br/>Go <a href="https://trac.v2.nl/wiki/pyOSC">here</a> to get the module for Python.
-<br/><i>step three</i>
+## step three
 Once installed, launch your terminal. Navigate to the directory where your file ended up (ex: <code>cd Downloads</code>) and then type ls to get the path of the (hopefully unzipped) folder we downloaded. Change directories again to get inside that folder (ex: <code>cd pyOSC-0.3.5b-5294</code>) and then install setup (ex: <code>ipython setup.py install</code>). When I ran this the first time I got a "Permission denied" error in the terminal, so I ran it again with the super user do command (ex: <code>sudo ipython setup.py install</code>).
-<br/><i>step four</i>
+## step four
 As stated earlier, OSC is a network protocol: we have a sender who sends messages (with some network [IP] address) that is capable of passing messages to a receiver (if there is a receiver currently listening). If there is no receiver, the messages the sender outputs simply disappear. Our receiver is going to live in SuperCollider, so after you have installed the pyOSC module, let's switch gears to SC.
 <br/>SC has two components to it: the lang (for example, a blank window which should appear if you hit Command+N), where you will tell SC what to do, and the server (those two modules at the bottom left of your screen...), which will receive information from the lang and run our audio (among other things, the details of which i will spare you from). The lang is where you type and execute code (by highlighting and pressing Function+Enter), which, if it does not involve audio, you can do without booting the server.
 <br/>That that says "post" is the console/post window. Messages/Errors from SC will appear there, and it is your primary tool to track the interaction between the lang and the server.
 <br/>The server should be off on startup. For most fun things in SC you are going to need to boot the localhost server (and sometimes the internal one, but those are only for certain situations), so go ahead and do that (it should be in the lower left-hand corner of your screen). While you are at it, go ahead and make a new lang window (Command+N).
 <br/>So, we get a startup dialog in the post window confirming what port the Server is on, the detected audio devices, what is set as input/output at boot, and various other default settings. Super exciting so far, I know.
-<br/><i>step five</i>
+## step five
 So, let's start coding in our lang window. I am going to make two things: a SynthDef that plays a Sine Wave and an OSCresponder that listens for any message sent that is prepended with the symbol '\print'. Copy and paste the code below into a new window:
 <pre><code>
 //receiving from iPython
@@ -48,7 +52,7 @@ You could use functions to generate audio in SC, but SC has an optimized way of 
 <br/>Now that we have assigned an instance of <code>Synth(\sin)</code> to <code>h</code>, we can alter <code>h</code> on the fly. If you were to type <code>h.set( \amp, 0.9 )</code>, you could change the amplitude level of that particular instance of the <code>Synth</code>. <code>.set</code> is what is going to give us the ability to change the frequency from iPython without having to stop the <code>Synth</code>.
 <br/>The <code>OSCFunc</code> here is assigned to a variable (<code>x</code>), so I could reference it elsewhere if I wanted to. I have set the <code>OSCFunc</code> to respond to any message being sent over the server prepended with the message <code>'\print'</code>. For our purposes, we can ignore the time and responder arguments, and simply focus on <code>msg</code>, which is where we will receive frequency data from <code>pyOSC</code>.
 <br/>In order to do this, I created a variable called <code>pyFreq</code>, and set it to store whatever value comes in at position 1 in the <code>msg</code> array. I am also converting that number to a floating point one, though, apparently, <code>pyOSC</code> passes this information along for us (so this part is redundant). I then post <code>pyFreq</code> to the post window (so I can monitor what frequency my <code>SinOsc</code> is playing), and use <code>h.set</code> to set the symbol <code>freq</code>, from our <code>SynthDef \sin</code>, to <code>pyFreq</code>. The last thing we have to do is add the responder to the server. Go ahead and execute all of this code, and let's move back to iPython.
-<br/><i>step six</i>
+## step six
 Launch iPython via the command line. Here is the code we are going to use:
 <pre><code>In [1]: import OSC
 In [2]: import time, random
