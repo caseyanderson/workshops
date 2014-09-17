@@ -1,4 +1,4 @@
-# An Introduction to Processing (pt. 2)
+# An Introduction to Processing (pt. 3)
 
 Note: anything in between carrots (`<` to `>`) denotes user input.
 
