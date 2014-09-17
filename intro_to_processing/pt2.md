@@ -89,6 +89,7 @@ Before running this code, how many lines will be drawn before `i` is greater tha
 
 
 
+
 12
 
 Try running the code now.
