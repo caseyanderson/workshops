@@ -1,18 +1,43 @@
-<i>basics, basic shapes, interfacing with the mouse</i>
-<br/>Hitting the play button (top left of the Processing window) runs a patch. Hitting the stop button (next to the play button) stops a patch. That black bar thing at the bottom of the Processing window is the post window. This is where Processing will communicate with you, including telling you what is not working and why.
-<br/>Copy and paste the following text into a Processing window.
-<pre>//two backslashes mean the text is a comment</pre>
+# An Introduction to Processing (pt. 1)
+
+Note: anything in between carrots (`<` to `>`) denotes user input.
+
+*Quick reference links*
+
+[Processing](http://processing.org/)
+
+[OpenProcessing](http://www.openprocessing.org/)
+
+## basics, basic shapes, interfacing with the mouse
+
+Hitting the play button (top left of the Processing window) runs a patch. Hitting the stop button (next to the play button) stops a patch. That black bar thing at the bottom of the Processing window is the post window. This is where Processing will communicate with you, including telling you what is not working and why.
+
+Copy and paste the following text into a Processing window.
+
+`//two backslashes mean the text is a comment`
+
 When something is commented ("commented out") the computer ignores it.
-<br/>You can comment things out manually, on each line, or you can select multiple lines at once and type [command /]. You can do the same thing to uncomment multiple lines of code.
-<br/>Lastly, you can type /* to indicate the beginning of a block of comments, and specify the end of with */
-<br/><i>drawing</i>
+
+You can comment things out manually, on each line, or you can select multiple lines at once and type `<Command + />`. You can do the same thing to uncomment multiple lines of code.
+
+Lastly, you can type `/*` to indicate the beginning of a block of comments, and specify the end of with `*/`
+
+## drawing
+
 Copy the below code into the Processing window and hit Play.
-<br/><pre>ellipse( 50, 50, 80, 80 );</pre>
-Strings of numbers inside of parentheses are known as parameters. They tell the object (in the above example, an ellipse) how it should be constructed.
-<br/>Try changing the arguments to our ellipse. What does each argument do?
-<br/><i>drawing some circles</i>
+
+`ellipse( 50, 50, 80, 80 );`
+
+Strings of numbers inside of parentheses are called parameters.
+
+Try changing the parameters to the ellipse code above. What does each parameters do?
+
+## drawing some circles
+
 Copy the code below into a Processing window and press play.
-<pre>void setup() {
+
+```
+void setup() {
   size( 480, 120 );
   smooth();
 }
@@ -24,8 +49,10 @@ void draw() {
     fill( 255 );
   }
   ellipse( mouseX, mouseY, 80, 80 );
-}</pre>
-<br/>What happens?
+}
+```
+
+What happens?
 How big is the window?
 What does fill do?
 What do mouseX and mouseY mean, and what are they doing here?
