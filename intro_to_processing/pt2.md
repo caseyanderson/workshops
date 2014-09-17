@@ -85,13 +85,6 @@ So, to break this down:
 
 Before running this code, how many lines will be drawn before `i` is greater than 80?
 
-
-
-
-
-
-12
-
 Try running the code now.
 
 The benefit of this is that you do not have to write 12 `line()` statements. When programming, often times multiple lines of code can be condensed into smaller blocks using things like `for()` structures. A `while()` loop is similar to `for()`, basically saying while this is the case (or as long as this is the case) perform this statement continuously. I recommend sticking with `for()` loops over `while()` loops, as the `while()` loop has the potential to freeze your code/computer until it is true.
