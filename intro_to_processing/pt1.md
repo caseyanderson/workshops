@@ -1,5 +1,6 @@
 # An Introduction to Processing (pt. 1)
 
+## Table of Contents
 [Pt. 2](pt2.md)
 
 [Pt. 3](pt3.md)
