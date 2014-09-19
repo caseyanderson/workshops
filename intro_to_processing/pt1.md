@@ -1,8 +1,11 @@
 # An Introduction to Processing (pt. 1)
 
 [Pt. 2](pt2.md)
+
 [Pt. 3](pt3.md)
+
 [Pt. 4](pt4.md)
+
 [Pt. 5](pt5.md)
 
 Note: anything in between carrots (`<` to `>`) denotes user input.
