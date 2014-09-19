@@ -117,3 +117,5 @@ void draw() {
 In this case I am filling a rectangle with a kind of darkish dirty shade of orange if and only if the mouse is pressed down, otherwise, the rectangle will be white (as far as the computer is concerned, the rectangle is still "filled" with white).
 
 `mouseX` and `mouseY` allow you to use the position of the mouse pointer on the screen to pass information to, in this case, the center x and center y locations of our rectangle.
+
+[next](pt2.md)
