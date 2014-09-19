@@ -128,3 +128,5 @@ void draw() {
 What is happening here?
 
 Deciding what parts of the program need to go in a `setup()` statement, and what parts need to go into a `draw()` loop depends on the type of behavior needed. The important thing to remember is that `setup()` will always be executed first and (only) once. The `draw()` loop will begin immediately after `setup()` is complete, and will loop repeatedly.
+
+Back to [Pt. 2](pt2.md), Onward to [Pt. 4](pt4.md)

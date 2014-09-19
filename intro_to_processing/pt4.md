@@ -67,3 +67,5 @@ What are the differences between this version and the previous one?
 For every subsequent eye that we want to add, we could just write another line of code that calls where each eye should be.
 
 Try making a design of some sort, or multiple shapes, and abstracting it into a function. Use the patch above as an example.
+
+Back to [Pt. 3](pt3.md), Onward to [Pt. 5](pt5.md)

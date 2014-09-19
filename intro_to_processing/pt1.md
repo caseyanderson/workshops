@@ -1,5 +1,10 @@
 # An Introduction to Processing (pt. 1)
 
+[Pt. 2](pt2.md)
+[Pt. 3](pt3.md)
+[Pt. 4](pt4.md)
+[Pt. 5](pt5.md)
+
 Note: anything in between carrots (`<` to `>`) denotes user input.
 
 *Quick reference links*
@@ -118,4 +123,4 @@ In this case I am filling a rectangle with a kind of darkish dirty shade of oran
 
 `mouseX` and `mouseY` allow you to use the position of the mouse pointer on the screen to pass information to, in this case, the center x and center y locations of our rectangle.
 
-[next](pt2.md)
+[Pt. 2](pt2.md)
