@@ -1,12 +1,21 @@
 # An Introduction to Processing (pt. 5)
 
-Note: anything in between carrots (`<` to `>`) denotes user input.
+## Table of Contents
+[Pt. 1](pt1.md)
 
-*Quick reference links*
+[Pt. 2](pt2.md)
+
+[Pt. 3](pt3.md)
+
+[Pt. 4](pt4.md)
+
+## Quick reference links
 
 [Processing](http://processing.org/)
 
 [OpenProcessing](http://www.openprocessing.org/)
+
+Note: anything in between carrots (`<` to `>`) denotes user input.
 
 ## arrays
 
