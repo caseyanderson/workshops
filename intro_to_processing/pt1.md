@@ -9,13 +9,13 @@
 
 [Pt. 5](pt5.md)
 
-Note: anything in between carrots (`<` to `>`) denotes user input.
-
-*Quick reference links*
+## Quick reference links
 
 [Processing](http://processing.org/)
 
 [OpenProcessing](http://www.openprocessing.org/)
+
+Note: anything in between carrots (`<` to `>`) denotes user input.
 
 ## basics
 
