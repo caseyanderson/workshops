@@ -22,7 +22,7 @@ OSC is a network protocol: we have a sender who sends messages (with some networ
 
 SC has two components to it: the lang (for example, a blank window which should appear if you hit Command+N), where you will tell SC what to do, and the server (those two modules at the bottom left of your screen...), which will receive information from the lang and run our audio (among other things, the details of which i will spare you from). The lang is where you type and execute code (by highlighting and pressing <Function+Enter>), which, if it does not involve audio, you can do without booting the server.
 
-######### continuie editing from here
+######### continue editing from here
 
 That that says "post" is the console/post window. Messages/Errors from SC will appear there, and it is your primary tool to track the interaction between the lang and the server.
 <br/>The server should be off on startup. For most fun things in SC you are going to need to boot the localhost server (and sometimes the internal one, but those are only for certain situations), so go ahead and do that (it should be in the lower left-hand corner of your screen). While you are at it, go ahead and make a new lang window (Command+N).
