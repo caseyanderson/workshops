@@ -1,6 +1,8 @@
 # Python to Supercollider
 *Summer 2014, Casey Anderson*
 
+Note: anything in between carrots (`<` to `>`) denotes user input.
+
 *Note: Let's say you do not use iPython, and prefer to use Python in the command line as installed via OSX. Good news for you! The only thing you will need to change throughout this tutorial is the install code (i.e. instead of `ipython setup.py install`, you can just type `python setup.py install`).
 ## step one
 Go [here](http://supercollider.sourceforge.net/downloads/) to download SuperCollider. We are going to focus on some very simple applications in SC, but if you are curious to read more about how it works, I would recommend checking out the [wiki](http://supercollider.sourceforge.net/wiki/) and/or the [SC book](http://supercolliderbook.net/) (alternately, if you find yourself swept off your feet by SC, you should sign up for the mailing list [warning: hundreds of emails a day...]), which will eventually function as a help database that lives in your email. You can search the mailing list via google, but I think that is more of a pain in the ass than doing so in GMail, for example. Once your download is complete, go ahead and install the program.
@@ -8,13 +10,21 @@ Go [here](http://supercollider.sourceforge.net/downloads/) to download SuperColl
 ## step two
 We are going to use [OpenSoundControl](http://opensoundcontrol.org/introduction-osc) to talk to SuperCollider via iPython, so we are going to need a Python Module in order to facilitate that connection. Open Sound Control (or OSC for short) is a network-based protocol to allow for communications between multiple computers or multiple programs on the same computer. We are basically going to use SuperCollider as our audio engine and Python as our controller.
 
-<br/>Go <a href="https://trac.v2.nl/wiki/pyOSC">here</a> to get the module for Python.
+Go [here](https://trac.v2.nl/wiki/pyOSC) to get the module for Python.
+
 ## step three
-Once installed, launch your terminal. Navigate to the directory where your file ended up (ex: <code>cd Downloads</code>) and then type ls to get the path of the (hopefully unzipped) folder we downloaded. Change directories again to get inside that folder (ex: <code>cd pyOSC-0.3.5b-5294</code>) and then install setup (ex: <code>ipython setup.py install</code>). When I ran this the first time I got a "Permission denied" error in the terminal, so I ran it again with the super user do command (ex: <code>sudo ipython setup.py install</code>).
+
+Once installed, launch your terminal. Navigate to the directory where your file ended up (ex: `cd Downloads`) and then type `ls` to get the path of the folder we downloaded. Change directories again to get inside that folder (ex: `cd pyOSC-0.3.5b-5294`) and then install setup (ex: `sudo ipython setup.py install`).
+
 ## step four
-As stated earlier, OSC is a network protocol: we have a sender who sends messages (with some network [IP] address) that is capable of passing messages to a receiver (if there is a receiver currently listening). If there is no receiver, the messages the sender outputs simply disappear. Our receiver is going to live in SuperCollider, so after you have installed the pyOSC module, let's switch gears to SC.
-<br/>SC has two components to it: the lang (for example, a blank window which should appear if you hit Command+N), where you will tell SC what to do, and the server (those two modules at the bottom left of your screen...), which will receive information from the lang and run our audio (among other things, the details of which i will spare you from). The lang is where you type and execute code (by highlighting and pressing Function+Enter), which, if it does not involve audio, you can do without booting the server.
-<br/>That that says "post" is the console/post window. Messages/Errors from SC will appear there, and it is your primary tool to track the interaction between the lang and the server.
+
+OSC is a network protocol: we have a sender who sends messages (with some network [IP] address) that is capable of passing messages to a receiver (if there is a receiver currently listening). If there is no receiver, the messages the sender outputs simply disappear. Our receiver is going to live in SuperCollider, so after you have installed the pyOSC module, let's switch gears to SC.
+
+SC has two components to it: the lang (for example, a blank window which should appear if you hit Command+N), where you will tell SC what to do, and the server (those two modules at the bottom left of your screen...), which will receive information from the lang and run our audio (among other things, the details of which i will spare you from). The lang is where you type and execute code (by highlighting and pressing <Function+Enter>), which, if it does not involve audio, you can do without booting the server.
+
+######### continuie editing from here
+
+That that says "post" is the console/post window. Messages/Errors from SC will appear there, and it is your primary tool to track the interaction between the lang and the server.
 <br/>The server should be off on startup. For most fun things in SC you are going to need to boot the localhost server (and sometimes the internal one, but those are only for certain situations), so go ahead and do that (it should be in the lower left-hand corner of your screen). While you are at it, go ahead and make a new lang window (Command+N).
 <br/>So, we get a startup dialog in the post window confirming what port the Server is on, the detected audio devices, what is set as input/output at boot, and various other default settings. Super exciting so far, I know.
 ## step five
