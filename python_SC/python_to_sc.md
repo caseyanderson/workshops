@@ -1,7 +1,7 @@
 # Python to Supercollider
 *Summer 2014, Casey Anderson*
 
-## Quick reference links
+### Quick reference links
 
 [SuperCollider](https://supercollider.github.io/)
 
