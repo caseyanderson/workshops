@@ -1,11 +1,24 @@
 # Python to Supercollider
 *Summer 2014, Casey Anderson*
 
+## Quick reference links
+
+[SuperCollider](https://supercollider.github.io/)
+
+[SCBook](http://supercolliderbook.net/)
+
+[SCMailing Lists](http://www.birmingham.ac.uk/facilities/BEAST/research/supercollider/mailinglist.aspx)
+
+[OpenSoundControl](http://opensoundcontrol.org/)
+
+[iPython](http://ipython.org/)
+
+[pyOSC](https://trac.v2.nl/wiki/pyOSC)
+
 Note: anything in between carrots (`<` to `>`) denotes user input.
 
-*Note: Let's say you do not use iPython, and prefer to use Python in the command line as installed via OSX. Good news for you! The only thing you will need to change throughout this tutorial is the install code (i.e. instead of `ipython setup.py install`, you can just type `python setup.py install`).
 ## step one
-Go [here](http://supercollider.sourceforge.net/downloads/) to download SuperCollider. We are going to focus on some very simple applications in SC, but if you are curious to read more about how it works, I would recommend checking out the [wiki](http://supercollider.sourceforge.net/wiki/) and/or the [SC book](http://supercolliderbook.net/) (alternately, if you find yourself swept off your feet by SC, you should sign up for the mailing list [warning: hundreds of emails a day...]), which will eventually function as a help database that lives in your email. You can search the mailing list via google, but I think that is more of a pain in the ass than doing so in GMail, for example. Once your download is complete, go ahead and install the program.
+Go [here](https://supercollider.github.io/download.html) to download SuperCollider. Once your download is complete, go ahead and install the program.
 
 ## step two
 We are going to use [OpenSoundControl](http://opensoundcontrol.org/introduction-osc) to talk to SuperCollider via iPython, so we are going to need a Python Module in order to facilitate that connection. Open Sound Control (or OSC for short) is a network-based protocol to allow for communications between multiple computers or multiple programs on the same computer. We are basically going to use SuperCollider as our audio engine and Python as our controller.
