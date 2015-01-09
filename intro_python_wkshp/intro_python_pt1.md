@@ -8,7 +8,7 @@
 
 [Pip](http://pypi.python.org/pypi/pip)
 
-[Sublime Text 2](http://www.sublimetext.com/2)
+[Atom](https://atom.io/) or [Sublime Text 2](http://www.sublimetext.com/2)
 
 [iTerm2](http://www.iterm2.com/) (I actually prefer this to the Mac OSX Terminal, but either is fine)
 
@@ -68,7 +68,6 @@ pip install numpy
 ```
 *SciPy*
 ```
-brew install gfortran
 pip install scipy
 ```
 *Flask*
@@ -95,4 +94,4 @@ In [2]: Flask.<AND THEN PRESS THE TAB KEY>
 
 If you get a long list of methods, you did it correctly. If not, review the steps above and make sure you did not actually skip anything.
 
-Last but not least, we are going to need access to a text editor of some sort. There are lots of options, but the two I normally recommend are [TextMate](http://macromates.com/) or [SublimeText2](http://www.sublimetext.com/). I use SublimeText, but you can use whatever you want. Nonetheless, you will need a text editor, that frequently will be open right next to your Terminal window, for any serious programming.
+Last but not least, we are going to need access to a text editor of some sort. There are lots of options, but the two I normally recommend are [Atom](https://atom.io/) or [Sublime Text 2](http://www.sublimetext.com/2). I use Atom these days, but you can use whatever you want. Nonetheless, you will need a text editor, that frequently will be open right next to your Terminal window, for any serious programming.
