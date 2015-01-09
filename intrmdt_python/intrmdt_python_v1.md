@@ -17,7 +17,7 @@ Note: anything in between carrots (`<` to `>`) denotes user input.
 [Dive Into Python](http://www.diveintopython.net/) - great reference
 
 ## Dictionaries
-A dictionary (or `dict` for short) is a built-in datatype in python. `dicts` are key/value pairs between curly braces.
+A dictionary (or `dict`) is a built-in datatype in python. `dicts` are key/value pairs between curly braces.
 
 *For example:*
 ```
@@ -28,7 +28,7 @@ The line above creates a `dict` with the `key` `'name'` and stores it to the var
 In [9]: d
 Out[9]: {'name': 'boris'}
 ```
-To add a new key-value pair, simply assign the new key a value at `d`. If the key (which is case-sensitive) is not already in use t will be added to the dict d with its value. If the key is already in use the new value will simply overwrite the previous one.
+To add a new key-value pair, simply assign the new key a value at `d`. If the key is not already in use it will be added to `d`. If the key is already in use the new value will simply overwrite the previous one.
 
 *For Example*
 ```
@@ -47,7 +47,7 @@ In [25]: d['age']=60
 In [26]: d
 Out[26]: {'age': 60, 'eyes': 'brown', 'hair': 'bald', 'name': 'boris'}
 ```
-This example illustrates how to add a new key-value pair to a dictionary (`'eyes'` and `'brown'`) as well as how to update or overwrite the value of a pre-existing key (`'age'`).
+Here a new key-value pair was added to `d` (`'eyes'` and `'brown'`) and the value associated with the key `'age'` was updated to `60` (`d` used to list the `'age'` of `'boris'` as `40`).
 
 ## Lists
 
