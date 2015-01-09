@@ -12,6 +12,12 @@
 
 [iTerm2](http://www.iterm2.com/) (I actually prefer this to the Mac OSX Terminal, but either is fine)
 
-
+[Dive Into Python](http://www.diveintopython.net/) - great reference
 
 ## Dictionaries
+
+## Lists
+
+## Objects
+
+## Classes
