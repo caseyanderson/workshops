@@ -32,7 +32,7 @@ To add a new key-value pair, simply assign the new key a value at `d`. If the ke
 
 *For Example*
 ```
-In [21]: d = {'name': 'boris', 'age':40, 'hair':'bald'}
+In [21]: d = {'name': 'boris', 'age': 40, 'hair':'bald'}
 
 In [22]: d
 Out[22]: {'age': 40, 'hair': 'bald', 'name': 'boris'}
