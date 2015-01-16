@@ -17,7 +17,7 @@ Note: anything in between carrots (`<` to `>`) denotes user input.
 [Dive Into Python](http://www.diveintopython.net/) - great reference
 
 ## Dictionaries
-A dictionary (or `dict`) is a built-in datatype in python. `dicts` are key/value pairs between curly braces.
+A dictionary (or `dict`) is a built-in datatype in python. `dicts` consist of key/value pairs between curly braces.
 
 *For example:*
 ```
@@ -28,7 +28,7 @@ The line above creates a `dict` with the `key` `'name'` and stores it to the var
 In [9]: d
 Out[9]: {'name': 'boris'}
 ```
-To add a new key-value pair, simply assign the new key a value at `d`. If the key is not already in use it will be added to `d`. If the key is already in use the new value will simply overwrite the previous one.
+To add a new key-value pair assign the new key a value at `d`. If the key is not already in use it will be added to `d`. If the key is already in use the new value will simply overwrite the previous one.
 
 *For Example*
 ```
@@ -49,7 +49,17 @@ Out[26]: {'age': 60, 'eyes': 'brown', 'hair': 'bald', 'name': 'boris'}
 ```
 Here a new key-value pair was added to `d` (`'eyes'` and `'brown'`) and the value associated with the key `'age'` was updated to `60` (`d` used to list the `'age'` of `'boris'` as `40`).
 
+But what if you need to remove something from a `dict`? There are a few ways to do this:
+1. lkjasdflkj
+
+
+*Quick Notes*
+* `dicts` are not typed. It is very common to see a variety of datatypes in the same `dict`. One can even store a `dict` as a value inside of another `dict`.
+* `dicts` allow provide the ability to add and remove key/value pairs at any time.
+* Unlike `lists` `dicts` have no "order."
+
 ## Lists
+
 
 ## Objects
 
