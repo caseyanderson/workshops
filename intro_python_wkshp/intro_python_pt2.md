@@ -16,7 +16,7 @@ Another good example of object orientation: painters do not design a new (set of
 
 any character surrounded by quotes. Quotes must be balanced. In other words, I could say
 
-```
+```python
 a = 'this'
 ..a = “this”
 #but not:
@@ -26,14 +26,14 @@ a = 'this
 
 Similarly, if we are going to declare a variable as a string, we have to use quotes.
 
-```
+```python
 a = this
 #does not work because the word this is not defined.
 ```
 
 Python allows for numerous manipulations to strings. More specifically, if we go back to our original example:
 
-```
+```python
 a = 'this'
 ```
 
@@ -41,21 +41,21 @@ We could use various operations on it to get various information from our variab
 
 *For example:*
 
-```
+```python
 In [4]: len(a)
 Out[4]: 4
 ```
 
 We could also say:
 
-```
+```python
 In [5]: type(a)
 Out[5]: str    # str is short for string
 ```
 
 Lastly, we can return a part of the string by doing the following:
 
-```
+```python
 In [6]: a[:3]
 Out[6]: 'thi'
 ```
@@ -67,7 +67,7 @@ This is a good strategy for working with iPython in general. Any time I get a ne
 From this list, we can type out any of the functions followed by a `?` to see a brief description of what it does.
 *For example:*
 
-```
+```python
 In [7]: a.upper?
 Type:       builtin_function_or_method
 String Form:<built-in method upper of str object at 0x104488750>
@@ -79,21 +79,21 @@ Return a copy of the string S converted to uppercase.
 
 So let's convert our string, contained in the variable `a`, to a capitalized version of itself. Try this:
 
-```
+```python
 In [8]: a.upper()
 Out[8]: 'THIS'
 ```
 
 However, if you try this:
 
-```
+```python
 In [9]: a
 Out[9]: 'this'
 ```
 
 So, if we wanted to permanently change a, we could do this:
 
-```
+```python
 In [10]: a = a.upper()
 
 In [11]: a
@@ -104,7 +104,7 @@ Out[11]: 'THIS'
 
 There are two basic types of numbers: integers and floating point numbers (floats for short). Integers are any whole number (positive or negative), whereas floats are any number with a decimal point. Try this:
 
-```
+```python
 In [12]: a = 5
 
 In [13]: type(a)
@@ -112,7 +112,7 @@ Out[13]: int
 ```
 
 Whereas:
-```
+```python
 In [14]: a = 4.0
 
 In [15]: type(a)
@@ -124,12 +124,12 @@ If you want to, you could now enter `a.<TAB>` to see what other methods `a` (the
 ## Assignment operator, more variables
 
 In Python, `=` does not mean what you would normally think it does. Our previous example:
-```
+```python
 In [16]: a = 4.0
 ```
 
 Means “assign 4.0” to the variable named `a`. This is why we cannot say the following:
-```
+```python
 In [17]: 5 = 6
   File "<ipython-input-17-6d9c0c29354b>", line 1
     5 = 6
@@ -141,7 +141,7 @@ So a 6 can never be assigned (or put inside) a 5, so this line of code will alwa
 Variables must be assigned prior to their use, otherwise python throws an error because it does not understand what you want it to do.
 
 Try this:
-```
+```python
 In [18]: x
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
@@ -152,7 +152,7 @@ NameError: name 'x' is not defined
 ```
 
 Nonetheless, variables, once assigned (and therefore established as a particular type), can be converted to other data types. For example:
-```
+```python
 In [21]: a = 5
 
 In [22]: float(a)
@@ -160,7 +160,7 @@ Out[22]: 5.0
 ```
 
 Or similarly:
-```
+```python
 In [23]: a = 4.9
 
 In [24]: int(a)
@@ -169,7 +169,7 @@ Out[24]: 4
 ## Lists
 
 A compound data type used to group together other values. A list is written as a series of comma-separated values (or items) between square brackets. They do not need to be of uniform type. For example:
-```
+```python
 In [25]: a = ['spam', 'eggs', 100, 1234]
 
 In [26]: a
@@ -178,7 +178,7 @@ Out[26]: ['spam', 'eggs', 100, 1234]
 
 Individual items in a list are referenced by their index, or position. We can reference individual items by entering the variable and the position (counting from 0) into the interpreter.
 *For example:*
-```
+```python
 In [27]: a[0]
 Out[27]: 'spam'
 In [28]: a[3]
@@ -188,7 +188,7 @@ Out[29]: ['spam', 'eggs']
 ```
 
 Individual items/elements in a string can be rewritten as follows:
-```
+```python
 In [30]: a[1] = 2
 
 In [31]: a
@@ -196,14 +196,14 @@ Out[31]: ['spam', 2, 100, 1234]
 ```
 
 If we do not happen to know how long a particular string is, we can make the interpreter figure it out be calling `len()` on it:
-```
+```python
 In [32]: len(a)
 Out[32]: 4
 ```
 ## if statements
 Let's take a look at a nice example of a function that contains Boolean Logic (true or false datatypes)
 
-```
+```python
 x = int(input('please enter an integer: ') )
 
 if x < 0:
@@ -230,7 +230,7 @@ Try to enter this into your interpreter with a different input value (not 42).
 ## for statements
 
 Type this into your interpreter:
-```
+```python
 words = ['cat', 'widow', 'defenestrate']
 
 for w in words:
@@ -244,13 +244,13 @@ The last built in function to be concerned with, at a basic level, is the range 
 generates lists containing arithmatic progressions.
 
 *For example:*
-```
+```python
 In [33]: range(10)
 Out[33]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 and
-```
+```python
 In [34]: range(5, 10)
 Out[34]: [5, 6, 7, 8, 9]
 ```
@@ -259,7 +259,7 @@ Out[34]: [5, 6, 7, 8, 9]
 By defining a function (using `def`), we can call it again for later use.
 
 *For example:*
-```
+```python
 def fib(n):
     a, b = 0, 1
     while a < n:
@@ -269,8 +269,8 @@ def fib(n):
 
 Here we actually call the function and set `n`, so it will print the Fibonacci series up to (in this case) whatever `n` is:
 
-*For Example:
-```
+*For Example:*
+```python
 In [39]: fib( 2000 )
 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
 ```
