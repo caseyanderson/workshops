@@ -90,7 +90,7 @@ The main different between `del` and `.pop` is that `.pop` will return the value
 *Quick Notes*
 * `dicts` are not typed. It is very common to see a variety of datatypes in the same `dict`. One can even store a `dict` as a value inside of another `dict`.
 * `dicts` allow provide the ability to add and remove key/value pairs at any time.
-* Unlike `lists` `dicts` have no "order."
+* `dicts` are unordered.
 
 ## Lists
 
