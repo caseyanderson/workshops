@@ -53,7 +53,7 @@ But what if you need to remove something from a `dict`? There are a few ways to 
 1. `del`
 2. `pop`
 
-*Using del*
+### Using del
 
 `del` deletes an item from a dictionary by key (or, more generally, removes a value at a specific index). It's probably the simplest way to get rid of something in a `dict`
 ```python
@@ -69,7 +69,7 @@ Out[22]: {'hair': 'bald', 'name': 'boris'}
 ```
 So the value `'40'` has now been removed from the `dict d` at the index (or in this case, key) `'hair'`.
 
-*Using pop*
+### Using pop
 ```python
 In [28]: d.pop('hair')
 Out[28]: 'bald'
@@ -93,6 +93,20 @@ The main different between `del` and `.pop` is that `.pop` will return the value
 * `dicts` are unordered.
 
 ## Lists
+A `List` is an ordered set of elements within square brackets.
+
+`Lists` must be declared prior to usage:
+```python
+n [1]: h = [ 'this', 'is', 'a', 'list' ]
+
+In [2]: h
+Out[2]: ['this', 'is', 'a', 'list']
+```
+`Lists` count from zero, so the first item in the list is actually at index 0.
+```python
+In [3]: h[0]
+Out[3]: 'this'
+```
 
 
 ## Objects
