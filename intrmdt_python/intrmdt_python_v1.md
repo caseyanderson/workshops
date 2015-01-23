@@ -93,20 +93,28 @@ The main different between `del` and `.pop` is that `.pop` will return the value
 * `dicts` are unordered.
 
 ## Lists
-A `List` is an ordered set of elements within square brackets.
+A `List` is an ordered set of elements within square brackets. Elements can be added or removed from a `List` dynamically and can be of arbitrary type (i.e. the same `List` can contain an `int`, `float`, and `str` element with no issue)
 
 `Lists` must be declared prior to usage:
 ```python
-n [1]: h = [ 'this', 'is', 'a', 'list' ]
+In [1]: h = [ 'this', 'is', 'a', 'list' ]
 
 In [2]: h
 Out[2]: ['this', 'is', 'a', 'list']
 ```
-`Lists` count from zero, so the first item in the list is actually at index 0.
+
+`Lists` count from zero, so the first item in the list is actually at index 0:
 ```python
 In [3]: h[0]
 Out[3]: 'this'
 ```
+
+To find the size of a `List` (i.e. the number of elements contained therein), use `len`:
+```python
+In [18]: len(h)
+Out[18]: 4
+```
+
 
 
 ## Objects
