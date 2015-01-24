@@ -103,7 +103,7 @@ In [2]: h
 Out[2]: ['this', 'is', 'a', 'list']
 ```
 
-`Lists` count from zero, so the first item in the list is actually at index 0:
+`Lists` count from zero, so the first item in the `List` is actually at index 0:
 ```python
 In [3]: h[0]
 Out[3]: 'this'
@@ -115,6 +115,18 @@ In [18]: len(h)
 Out[18]: 4
 ```
 
+To return a portion of a `List`, but not the entire thing, one can `slice` it.
+
+*For Example*
+```python
+In [41]: h = [ 'this', 'is', 'a', 'list' ]
+
+In [42]: h
+Out[42]: ['this', 'is', 'a', 'list']
+
+In [43]: h[1:3]
+Out[43]: ['is', 'a']
+```
 
 
 ## Objects
