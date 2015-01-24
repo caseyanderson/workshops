@@ -14,8 +14,6 @@ Note: anything in between carrots (`<` to `>`) denotes user input.
 
 [iTerm2](http://www.iterm2.com/) (I actually prefer this to the Mac OSX Terminal, but either is fine)
 
-[Dive Into Python](http://www.diveintopython.net/) - great reference
-
 ## Dictionaries
 A dictionary (or `dict`) is a built-in datatype in python. `dicts` consist of key/value pairs between curly braces.
 
