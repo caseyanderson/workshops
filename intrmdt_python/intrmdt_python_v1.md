@@ -109,7 +109,7 @@ In [3]: h[0]
 Out[3]: 'this'
 ```
 
-To find the size of a `List` (i.e. the number of elements contained therein), use `len`:
+To find the size of a `List` (i.e. the number of elements contained therein) use `len`:
 ```python
 In [18]: len(h)
 Out[18]: 4
