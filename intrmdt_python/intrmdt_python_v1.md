@@ -126,6 +126,17 @@ In [43]: h[1:3]
 Out[43]: ['is', 'a']
 ```
 
+`h[1:3]` returns each element from index 1 and stops before index 3, which prints elements at index 1 and 2.
+
+```python
+In [5]: h[:3]
+Out[5]: ['this', 'is', 'a']
+
+In [6]: h[3:]
+Out[6]: ['list']
+```
+
+
 
 ## Objects
 
