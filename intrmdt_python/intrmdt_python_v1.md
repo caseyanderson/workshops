@@ -128,7 +128,7 @@ Out[43]: ['is', 'a']
 
 `h[1:3]` returns each element from index 1 and stops before index 3, which prints elements at index 1 and 2.
 
-*Slicing Shortcut*
+### Slicing Shortcut
 ```python
 In [5]: h[:3]
 Out[5]: ['this', 'is', 'a']
@@ -137,8 +137,32 @@ In [6]: h[3:]
 Out[6]: ['list']
 ```
 
-The two examples above demonstrate a nice shorthand when slicing `Lists`. The `List` object interprets an omitted number to the left of the colon as a 0 and an omitted number to the right as `len(h)-1` (in this case).
+The `List` object interprets an omitted number to the left of the colon as a 0 and an omitted number to the right as `len(h)-1` (in this case).
 
+`append` and `insert` are the two most common ways to add an element to a `List`
+
+### Insert Example
+```python
+In [20]: h = [ 'this', 'is', 'a', 'list' ]
+
+In [21]: h
+Out[21]: ['this', 'is', 'a', 'list']
+
+In [22]: h.insert(3, 'great')
+
+In [23]: h
+Out[23]: ['this', 'is', 'a', 'great', 'list']
+```
+
+### Append Example
+```python
+In [30]: h.append('certainly')
+
+In [31]: h
+Out[31]: ['this', 'is', 'a', 'great', 'list', 'certainly']
+```
+
+`insert` adds an element to a `List` at index, `append` simply adds an element to the end of the `List`
 
 ## Objects
 
