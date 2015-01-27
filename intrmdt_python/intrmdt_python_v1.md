@@ -51,7 +51,7 @@ But what if you need to remove something from a `dict`? There are a few ways to 
 1. `del`
 2. `pop`
 
-### Using del
+#### Using del
 
 `del` deletes an item from a dictionary by key (or, more generally, removes a value at a specific index). It's probably the simplest way to get rid of something in a `dict`
 ```python
@@ -67,7 +67,7 @@ Out[22]: {'hair': 'bald', 'name': 'boris'}
 ```
 So the value `'40'` has now been removed from the `dict d` at the index (or in this case, key) `'hair'`.
 
-### Using pop
+#### Using pop
 ```python
 In [28]: d.pop('hair')
 Out[28]: 'bald'
@@ -128,7 +128,7 @@ Out[43]: ['is', 'a']
 
 `h[1:3]` returns each element from index 1 and stops before index 3, which prints elements at index 1 and 2.
 
-### Slicing Shortcut
+#### Slicing Shortcut
 ```python
 In [5]: h[:3]
 Out[5]: ['this', 'is', 'a']
@@ -141,7 +141,7 @@ The `List` object interprets an omitted number to the left of the colon as a 0 a
 
 `append` and `insert` are the two most common ways to add an element to a `List`
 
-### Insert Example
+#### Insert Example
 ```python
 In [20]: h = [ 'this', 'is', 'a', 'list' ]
 
@@ -154,7 +154,7 @@ In [23]: h
 Out[23]: ['this', 'is', 'a', 'great', 'list']
 ```
 
-### Append Example
+#### Append Example
 ```python
 In [30]: h.append('certainly')
 
@@ -162,7 +162,35 @@ In [31]: h
 Out[31]: ['this', 'is', 'a', 'great', 'list', 'certainly']
 ```
 
-`insert` adds an element to a `List` at index, `append` simply adds an element to the end of the `List`
+`insert` adds an element to a `List` at index, `append` simply adds an element to the end of a `List`.
+
+`extend` concatenates two Lists and returns a new one:
+
+*For Example*
+```python
+In [31]: h
+Out[31]: ['this', 'is', 'a', 'great', 'list', 'certainly']
+
+In [32]: i = [ 'the', 'best', 'list']
+
+In [33]: h.extend(i)
+
+In [34]: h
+Out[34]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
+```
+
+`index` allows one to search a `List` by `value`
+*For Example*
+```python
+In [36]: h.index('certainly')
+Out[36]: 5
+```
+
+This is helpful if you know what value you are looking for in a (potentially) gigantic `List` but have no idea where it is specifically.
+
+#### Removing Elements from a List
+
+There are two ways to remove an element 
 
 ## Objects
 
