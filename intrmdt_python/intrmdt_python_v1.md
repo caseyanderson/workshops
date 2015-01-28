@@ -180,6 +180,7 @@ Out[34]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list'
 ```
 
 `index` allows one to search a `List` by `value`
+
 *For Example*
 ```python
 In [36]: h.index('certainly')
@@ -190,7 +191,25 @@ This is helpful if you know what value you are looking for in a (potentially) gi
 
 #### Removing Elements from a List
 
-There are two ways to remove an element 
+There are two ways to remove an element from a List: `remove` and `pop`.
+
+#### Using remove
+```python
+In [37]: h
+Out[37]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
+
+In [38]: h.insert(2, 'is')
+
+In [39]: h
+Out[39]: ['this', 'is', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
+
+In [40]: h.remove('is')
+
+In [41]: h
+Out[41]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
+```
+
+`remove()`
 
 ## Objects
 
