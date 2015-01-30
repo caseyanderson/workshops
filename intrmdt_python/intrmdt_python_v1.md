@@ -191,7 +191,23 @@ This is helpful if you know what value you are looking for in a (potentially) gi
 
 #### Removing Elements from a List
 
-There are two ways to remove an element from a List: `remove` and `pop`.
+There are two ways to remove an element from a `List`: `pop` and `remove`.
+
+#### Using pop
+```python
+In [8]: h = ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
+
+In [9]: h
+Out[9]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
+
+In [10]: h.pop()
+Out[10]: 'list'
+
+In [11]: h
+Out[11]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best']
+```
+
+`pop()` removes and returns an item from a List at index. If no index is specified `pop()` removes and returns the last item of a `List`.
 
 #### Using remove
 ```python
@@ -209,8 +225,7 @@ In [41]: h
 Out[41]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
 ```
 
-`remove()`
-
+`remove()` gets rid of the first occurrence of value. In the above example, the value `'is'` was removed at index 1. In order to remove the second occurrence of `'is'` one would have to run `h.remove('is')` again.
 ## Objects
 
 ## Classes
