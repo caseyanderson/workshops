@@ -226,6 +226,7 @@ Out[41]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list'
 ```
 
 `remove()` gets rid of the first occurrence of value. In the above example, the value `'is'` was removed at index 1. In order to remove the second occurrence of `'is'` one would have to run `h.remove('is')` again.
+
 ## Objects
 
 ## Classes
