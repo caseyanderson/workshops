@@ -191,7 +191,7 @@ This is helpful if you know what value you are looking for in a (potentially) gi
 
 #### Removing Elements from a List
 
-There are two ways to remove an element from a `List`: `pop` and `remove`.
+There are two basic ways to remove an element from a `List`: `pop` and `remove`.
 
 #### Using pop
 ```python
