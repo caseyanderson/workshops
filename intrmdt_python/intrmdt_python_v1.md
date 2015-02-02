@@ -229,4 +229,8 @@ Out[41]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list'
 
 ## Objects
 
+An `object` is a self-contained, generalized data structures capable of being reused independent of context. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`’s data). In python everything is an `object`.
+
+
+
 ## Classes
