@@ -90,10 +90,10 @@ The main different between `del` and `.pop` is that `.pop` will return the value
 * `dicts` allow provide the ability to add and remove key/value pairs at any time.
 * `dicts` are unordered.
 
-## Lists
-A `List` is an ordered set of elements within square brackets. Elements can be added or removed from a `List` dynamically and can be of arbitrary type (i.e. the same `List` can contain an `int`, `float`, and `str` element with no issue)
+## lists
+A `list()` is an ordered set of elements within square brackets. Elements can be added or removed from a `list()` dynamically and can be of arbitrary type (i.e. the same `list()` can contain an `int`, `float`, and `str` element with no issue)
 
-`Lists` must be declared prior to usage:
+`lists` must be declared prior to usage:
 ```python
 In [1]: h = [ 'this', 'is', 'a', 'list' ]
 
@@ -101,19 +101,19 @@ In [2]: h
 Out[2]: ['this', 'is', 'a', 'list']
 ```
 
-`Lists` count from zero, so the first item in the `List` is actually at index 0:
+`lists` count from zero, so the first item in the `list()` is actually at index 0:
 ```python
 In [3]: h[0]
 Out[3]: 'this'
 ```
 
-To find the size of a `List` (i.e. the number of elements contained therein) use `len`:
+To find the size of a `list()` (i.e. the number of elements contained therein) use `len`:
 ```python
 In [18]: len(h)
 Out[18]: 4
 ```
 
-To return a portion of a `List`, but not the entire thing, one can `slice` it.
+To return a portion of a `list()`, but not the entire thing, one can `slice` it.
 
 *For Example*
 ```python
@@ -137,9 +137,9 @@ In [6]: h[3:]
 Out[6]: ['list']
 ```
 
-The `List` object interprets an omitted number to the left of the colon as a 0 and an omitted number to the right as `len(h)-1` (in this case).
+The `list()` object interprets an omitted number to the left of the colon as a 0 and an omitted number to the right as `len(h)-1` (in this case).
 
-`append` and `insert` are the two most common ways to add an element to a `List`
+`append` and `insert` are the two most common ways to add an element to a `list()`
 
 #### Insert Example
 ```python
@@ -162,9 +162,9 @@ In [31]: h
 Out[31]: ['this', 'is', 'a', 'great', 'list', 'certainly']
 ```
 
-`insert` adds an element to a `List` at index, `append` simply adds an element to the end of a `List`.
+`insert` adds an element to a `list()` at index, `append` simply adds an element to the end of a `list()`.
 
-`extend` concatenates two Lists and returns a new one:
+`extend` concatenates two lists and returns a new one:
 
 *For Example*
 ```python
@@ -179,7 +179,7 @@ In [34]: h
 Out[34]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list']
 ```
 
-`index` allows one to search a `List` by `value`
+`index` allows one to search a `list()` by `value`
 
 *For Example*
 ```python
@@ -187,11 +187,11 @@ In [36]: h.index('certainly')
 Out[36]: 5
 ```
 
-This is helpful if you know what value you are looking for in a (potentially) gigantic `List` but have no idea where it is specifically.
+This is helpful if you know what value you are looking for in a (potentially) gigantic `list()` but have no idea where it is specifically.
 
-#### Removing Elements from a List
+#### Removing Elements from a list
 
-There are two basic ways to remove an element from a `List`: `pop` and `remove`.
+There are two basic ways to remove an element from a `list()`: `pop` and `remove`.
 
 #### Using pop
 ```python
@@ -207,7 +207,7 @@ In [11]: h
 Out[11]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best']
 ```
 
-`pop()` removes and returns an item from a List at index. If no index is specified `pop()` removes and returns the last item of a `List`.
+`pop()` removes and returns an item from a `list()` at index. If no index is specified `pop()` removes and returns the last item of a `list()`.
 
 #### Using remove
 ```python
@@ -284,9 +284,9 @@ Out[12]:
 'sort']
 ```
 
-In the above example, an instance of a List object is stored at h. By calling `dir(h)` one can return all of the attributes that `List` has access to.
+In the above example, an instance of a `list()` `object` is stored at `h`. By calling `dir(h)` one can return all of the attributes that `list()` has access to.
 
-One can normally assume that an `object` will have an attribute describing its usage in what is called a `doc string`. One can query the `doc string` by simply calling `.__doc__` on an `object`.
+One can normally assume that an `object` will have an attribute describing its usage generally referred to as a `doc string`. One can query the `doc string` by simply calling `.__doc__` on an `object`.
 
 *For Example*
 ```python
