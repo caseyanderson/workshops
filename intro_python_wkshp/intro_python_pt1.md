@@ -24,7 +24,7 @@ While we are at it, go to Applications>Utilities>Terminal and run the Terminal a
 Install Homebrew by entering this into the Terminal:
 
 ```
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 When it is done, you can run ```brew update``` and then ```brew doctor``` in the terminal to make sure everything is working correctly (Homebrew will tell you if not).
