@@ -74,6 +74,11 @@ pip install scipy
 ```
 pip install Flask
 ```
+*beautiful soup 4*
+```python
+pip install beautifulsoup4
+````
+
 *iPython*
 ```
 pip install ipython
