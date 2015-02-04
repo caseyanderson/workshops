@@ -227,6 +227,26 @@ Out[41]: ['this', 'is', 'a', 'great', 'list', 'certainly', 'the', 'best', 'list'
 
 `remove()` gets rid of the first occurrence of value. In the above example, the value `'is'` was removed at index 1. In order to remove the second occurrence of `'is'` one would have to run `h.remove('is')` again.
 
+## Functions
+
+What programming workshop would be complete without a "Hello, World" function?
+
+```python
+def helloWorld():
+    print("HELLO WORLD!")
+```
+
+`def` is short for the word "define." In other words, the code above defines what behaviors `helloWorld()` refers to such that one can later simply call `helloWorld()` at the command line in order to print the message "Hello, World".
+
+One can normally assume that a `Function` will have an attribute (i.e. data) describing its usage, generally referred to as a `doc string`. One can query the `doc string` by simply calling `.__doc__` on a `Function` (this is also the case for `objects` and `classes`).
+
+*For Example*
+```python
+In [31]: h.__doc__
+Out[31]: "list() -> new empty list\nlist(iterable) -> new list initialized from iterable's items"
+```
+
+
 ## Objects
 
 An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`’s data). In python everything is an `object`, which allows everything to be assigned to a variable or passed to a function as a parameter.
@@ -285,15 +305,6 @@ Out[12]:
 ```
 
 In the above example, an instance of a `list()` `object` is stored at `h`. By calling `dir(h)` one can return all of the attributes that `list()` has access to.
-
-One can normally assume that an `object` will have an attribute describing its usage generally referred to as a `doc string`. One can query the `doc string` by simply calling `.__doc__` on an `object`.
-
-*For Example*
-```python
-In [31]: h.__doc__
-Out[31]: "list() -> new empty list\nlist(iterable) -> new list initialized from iterable's items"
-```
-
 
 
 ## Classes
