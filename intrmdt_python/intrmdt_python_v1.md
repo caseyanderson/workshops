@@ -340,7 +340,7 @@ Happy Birthday to you!
 
 ## Objects
 
-An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`'s which allows everything to be assigned to a variable or passed to a function as a parameter.
+An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`s data) which allows everything to be assigned to a variable or passed to a function as a parameter.
 
 #### Display all attributes with dir(self)
 ```python
