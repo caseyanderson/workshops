@@ -236,7 +236,7 @@ def helloWorld():
     print("HELLO WORLD!")
 ```
 
-`def` is short for the word "define." In other words, the code above defines what behaviors `helloWorld()` refers to such that one can later simply call `helloWorld()` at the command line in order to print the message "Hello, World". More specifically, the `def` (definition) creates a `function object` and assigns it a name.
+`def` is short for "define." The code above defines what behaviors `helloWorld()` refers to such that one can later simply call `helloWorld()` at the command line in order to print the message "Hello, World". More specifically, `def` (definition) creates a `function object` and assigns it a name.
 
 One can normally assume that a `Function` will have an attribute (i.e. data) describing its usage, generally referred to as a `doc string`. One can query the `doc string` by simply calling `.__doc__` on a `Function` (this is also the case for `objects` and `classes`).
 
@@ -246,7 +246,7 @@ In [31]: h.__doc__
 Out[31]: "list() -> new empty list\nlist(iterable) -> new list initialized from iterable's items"
 ```
 
-The `helloWord()` function above does not have a `doc string`, so let's add one now.
+The `helloWord()` function above does not have a `doc string`, so let's add one now:
 
 ```python
 def helloWorld():
@@ -257,16 +257,43 @@ def helloWorld():
 Which will allow for the following:
 
 ```python
-In [18]: paste
+In [21]: paste
 def helloWorld():
     """Greets the world upon creation"""
     print("HELLO WORLD!")
+
 ## -- End pasted text --
 
-In [19]: helloWorld.__doc__
+In [22]: helloWorld.__doc__
+Out[22]: 'Greets the world upon creation'
 ```
 
-*note:* the keyword `paste` in the above example (`In[18]`) comes from ipython (its a shorthand for %paste).
+*note:* the keyword `paste` in the above example (`In[21]`) comes from ipython (its a shorthand for %paste), NOT FROM PYTHON PROPER.
+
+#### Passing data to a function with parameters
+
+```python
+In [27]: paste
+def mult( a, b ):
+    """Multiplies the first parameter by the second parameter, returns the result"""
+    return a * b
+## -- End pasted text --
+
+In [28]: mult.__doc__
+Out[28]: 'Multiplies the first parameter by the second parameter, returns the result'
+
+In [29]: mult( 8675309, 4 )
+Out[29]: 34701236
+```
+
+One of the great things about python is the ability to do the following without altering our previous function whatsoever:
+
+```python
+In [31]: mult( 'spam ', 4 )
+Out[31]: 'spam spam spam spam '
+```
+
+The mult() function also demonstrates a new
 
 ## Objects
 
