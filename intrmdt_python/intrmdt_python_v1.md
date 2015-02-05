@@ -314,7 +314,6 @@ def happyBirthday(person):
 The `happyBirthday()` function above demonstrates how one could write a function to "sing" happy birthday to anyone (the name  is passed to the function via the parameter `person`). The repetition of the lines is handled with a `for` loop wrapped around an `if` statement, used here to format the third line of the song correctly.
 
 *Usage Example*
-
 ```python
 In [9]: paste
 def happyBirthday(person):
@@ -338,9 +337,9 @@ Happy Birthday, dear Zeke!
 Happy Birthday to you!
 ```
 
-## Objects
+## Objects and Classes
 
-An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`s data) which allows everything to be assigned to a variable or passed to a function as a parameter. blah
+An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`s data) which allows everything to be assigned to a variable or passed to a function as a parameter.
 
 #### Display all attributes with dir(self)
 ```python
@@ -396,6 +395,3 @@ Out[12]:
 ```
 
 In the above example, an instance of a `list()` `object` is stored at `h`. By calling `dir(h)` one can return all of the attributes that `list()` has access to.
-
-
-## Classes
