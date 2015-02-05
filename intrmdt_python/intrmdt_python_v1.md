@@ -289,11 +289,11 @@ Out[29]: 34701236
 One of the great things about python is the ability to do the following without altering our previous function whatsoever:
 
 ```python
-In [31]: mult( 'spam ', 4 )
-Out[31]: 'spam spam spam spam '
+In [31]: mult( 'spam', 4 )
+Out[31]: 'spamspamspamspam'
 ```
 
-The mult() function also demonstrates a new
+The `mult()` function also uses a statement that was not used in `helloWorld()` but is a crucial aspect of `functions`, `objects`, and `classes`: `return`.  `return` is used to break information out of a function. More specifically, the return statement here allows us to break the result of our multiplication operation out of the function and use it elsewhere.
 
 ## Objects
 
