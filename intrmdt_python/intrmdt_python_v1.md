@@ -311,7 +311,32 @@ def happyBirthday(person):
                 print message
 ```
 
-The `happyBirthday()` function above demonstrates how one could write a function to "sing" happy birthday to anyone (the name of the person is passed to the function via the parameter `person`). The repetition of the lines is handled `with` a for loop wrapped around an `if` statement, used here to format the third line of the song correctly.
+The `happyBirthday()` function above demonstrates how one could write a function to "sing" happy birthday to anyone (the name  is passed to the function via the parameter `person`). The repetition of the lines is handled with a `for` loop wrapped around an `if` statement, used here to format the third line of the song correctly.
+
+*Usage Example*
+
+```python
+In [9]: paste
+def happyBirthday(person):
+        """formats a happy birthday message with the birthday person's name"""
+        for i in range(4):
+            if i != 2:
+                message = "Happy Birthday to you!"
+                print message
+            else:
+                message = "Happy Birthday, dear " + person + "!"
+                print message
+## -- End pasted text --
+
+In [10]: happyBirthday.__doc__
+Out[10]: "formats a happy birthday message with the birthday person's name"
+
+In [11]: happyBirthday('Zeke')
+Happy Birthday to you!
+Happy Birthday to you!
+Happy Birthday, dear Zeke!
+Happy Birthday to you!
+```
 
 ## Objects
 
