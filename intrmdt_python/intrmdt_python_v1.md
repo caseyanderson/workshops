@@ -301,7 +301,7 @@ Originally sourced from [here](http://anh.cs.luc.edu/python/hands-on/3.1/handson
 
 ```python
 def happyBirthday(person):
-        """formats a happy birthday message with the birthday person's name"""
+        """sings a happy birthday message with the birthday person's name"""
         for i in range(4):
             if i != 2:
                 message = "Happy Birthday to you!"
@@ -318,7 +318,7 @@ The `happyBirthday()` function above demonstrates how one could write a function
 ```python
 In [9]: paste
 def happyBirthday(person):
-        """formats a happy birthday message with the birthday person's name"""
+        """sings a happy birthday message with the birthday person's name"""
         for i in range(4):
             if i != 2:
                 message = "Happy Birthday to you!"
@@ -329,7 +329,7 @@ def happyBirthday(person):
 ## -- End pasted text --
 
 In [10]: happyBirthday.__doc__
-Out[10]: "formats a happy birthday message with the birthday person's name"
+Out[10]: "sings a happy birthday message with the birthday person's name"
 
 In [11]: happyBirthday('Zeke')
 Happy Birthday to you!

@@ -13,11 +13,11 @@ def happyBirthday(person):
     print("Happy Birthday to you!")
 
 def happyBirthday(person):
-        """formats a happy birthday message with the birthday person's name"""
+        """sings a happy birthday message with the birthday person's name"""
         for i in range(4):
             if i != 2:
                 message = "Happy Birthday to you!"
-                return message
+                print message
             else:
                 message = "Happy Birthday, dear " + person + "!"
-                return message
+                print message
