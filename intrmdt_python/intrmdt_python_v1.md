@@ -295,9 +295,52 @@ Out[31]: 'spamspamspamspam'
 
 The `mult()` function also uses a statement that was not used in `helloWorld()` but is a crucial aspect of `functions`, `objects`, and `classes`: `return`.  `return` is used to break information out of a function. More specifically, the return statement here allows us to break the result of our multiplication operation out of the function and use it elsewhere.
 
+#### happyBirthday()
+
+Originally sourced from [here](http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html), alterations by CTA.
+
+```python
+def happyBirthday(person):
+        """sings a happy birthday message with the birthday person's name"""
+        for i in range(4):
+            if i != 2:
+                message = "Happy Birthday to you!"
+                print message
+            else:
+                message = "Happy Birthday, dear " + person + "!"
+                print message
+```
+
+The `happyBirthday()` function above demonstrates how one could write a function to "sing" happy birthday to anyone (the name  is passed to the function via the parameter `person`). The repetition of the lines is handled with a `for` loop wrapped around an `if` statement, used here to format the third line of the song correctly.
+
+*Usage Example*
+
+```python
+In [9]: paste
+def happyBirthday(person):
+        """sings a happy birthday message with the birthday person's name"""
+        for i in range(4):
+            if i != 2:
+                message = "Happy Birthday to you!"
+                print message
+            else:
+                message = "Happy Birthday, dear " + person + "!"
+                print message
+## -- End pasted text --
+
+In [10]: happyBirthday.__doc__
+Out[10]: "sings a happy birthday message with the birthday person's name"
+
+In [11]: happyBirthday('Zeke')
+Happy Birthday to you!
+Happy Birthday to you!
+Happy Birthday, dear Zeke!
+Happy Birthday to you!
+```
+
 ## Objects
 
-An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`’s data). In python everything is an `object`, which allows everything to be assigned to a variable or passed to a function as a parameter.
+An `object` is a self-contained, generalized data structure. `objects` typically have both `attributes` (which describe the data contained therein) and `methods` (functions which belong to the `object` and act on the `object`s data) which allows everything to be assigned to a variable or passed to a function as a parameter. blah
 
 #### Display all attributes with dir(self)
 ```python
