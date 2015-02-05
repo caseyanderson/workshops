@@ -236,7 +236,7 @@ def helloWorld():
     print("HELLO WORLD!")
 ```
 
-`def` is short for the word "define." In other words, the code above defines what behaviors `helloWorld()` refers to such that one can later simply call `helloWorld()` at the command line in order to print the message "Hello, World".
+`def` is short for the word "define." In other words, the code above defines what behaviors `helloWorld()` refers to such that one can later simply call `helloWorld()` at the command line in order to print the message "Hello, World". More specifically, the `def` (definition) creates a `function object` and assigns it a name.
 
 One can normally assume that a `Function` will have an attribute (i.e. data) describing its usage, generally referred to as a `doc string`. One can query the `doc string` by simply calling `.__doc__` on a `Function` (this is also the case for `objects` and `classes`).
 
