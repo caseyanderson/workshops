@@ -246,6 +246,27 @@ In [31]: h.__doc__
 Out[31]: "list() -> new empty list\nlist(iterable) -> new list initialized from iterable's items"
 ```
 
+The `helloWord()` function above does not have a `doc string`, so let's add one now.
+
+```python
+def helloWorld():
+    """Greets the world upon creation"""
+    print("HELLO WORLD!")
+```
+
+Which will allow for the following:
+
+```python
+In [18]: paste
+def helloWorld():
+    """Greets the world upon creation"""
+    print("HELLO WORLD!")
+## -- End pasted text --
+
+In [19]: helloWorld.__doc__
+```
+
+*note:* the keyword `paste` in the above example (`In[18]`) comes from ipython (its a shorthand for %paste).
 
 ## Objects
 
