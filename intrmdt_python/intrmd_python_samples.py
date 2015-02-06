@@ -2,6 +2,11 @@ def helloWorld():
     """Greets the world upon creation"""
     print("HELLO WORLD!")
 
+<<<<<<< HEAD
+def mult( a, b ):
+    """Multiplies the first parameter by the second parameter, returns the result"""
+    return a * b
+=======
 
 '''Function with parameter.'''
 
@@ -21,3 +26,4 @@ def happyBirthday(person):
             else:
                 message = "Happy Birthday, dear " + person + "!"
                 print message
+>>>>>>> 085624d5d735fe7222599ae03b5385befcf1bd06
