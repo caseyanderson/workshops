@@ -415,7 +415,7 @@ class BankAccount:
     def deposit(self, amount):
         self.balance += amount
         return self.balance
-        ```
+```
 
 *The Car Class*
 ```python
@@ -430,4 +430,4 @@ class Car(object):
         self.model = model
         self.color = color
         self.miles = miles
-        ```
+```
