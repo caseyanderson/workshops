@@ -26,4 +26,33 @@ def happyBirthday(person):
             else:
                 message = "Happy Birthday, dear " + person + "!"
                 print message
->>>>>>> 085624d5d735fe7222599ae03b5385befcf1bd06
+
+
+class BankAccount:
+  """A simple bank account class that reports account balance and reflects withdrawals and deposits"""
+  def __init__(self):
+        self.balance = 0
+
+    def withdraw(self, amount):
+        self.balance -= amount
+        return self.balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+
+
+class BankAccount:
+    """
+    A simple bank account class that reports account balance and reflects withdrawals and deposits
+    """
+    def __init__(self):
+        self.balance = 0
+
+    def withdraw(self, amount):
+        self.balance -= amount
+        return self.balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
