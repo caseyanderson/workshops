@@ -396,8 +396,10 @@ Out[12]:
 
 In the above example, an instance of a `list()` `object` is stored at `h`. By calling `dir(h)` one can return all of the attributes that `list()` has access to.
 
-#### Class example
+#### Class examples
+Here are three basic examples of classes in python. Try them out, read through them, compare/contrast. What design principles are similar between all three? Different?
 
+*The BankAccount Class*
 ```python
 class BankAccount:
     """
@@ -413,4 +415,19 @@ class BankAccount:
     def deposit(self, amount):
         self.balance += amount
         return self.balance
+        ```
+
+*The Car Class*
+```python
+class Car(object):
+    """
+    Models any car
+    """
+    wheels = 4
+
+    def __init__(self, make, model, color, miles):
+        self.make = make
+        self.model = model
+        self.color = color
+        self.miles = miles
         ```
