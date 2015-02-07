@@ -2,6 +2,29 @@ def helloWorld():
     """Greets the world upon creation"""
     print("HELLO WORLD!")
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x = x -1
+x-=1
+
+
+
+
 <<<<<<< HEAD
 def mult( a, b ):
     """Multiplies the first parameter by the second parameter, returns the result"""
@@ -35,8 +58,11 @@ class BankAccount:
         self.balance = 0
 
     def withdraw(self, amount):
-        self.balance -= amount
-        return self.balance
+        if(amount>=balance):
+            print "cannot withdraw, not enough funds"
+        else:
+                self.balance -= amount
+                return self.balance
 
     def deposit(self, amount):
         self.balance += amount
