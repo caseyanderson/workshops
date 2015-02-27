@@ -435,6 +435,9 @@ class Car(object):
 *The Dog Class*
 ```python
 class Dog:
+    """
+    Name a dog, teach it tricks
+    """
 
     def __init__(self, name):
         self.name = name
