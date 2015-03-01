@@ -21,25 +21,27 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly: 
-  
+  // put your main code here, to run repeatedly:
+
 }
 ```
 The lines of code that start with two forward slashes are ignored by the Arduino and are known as comments. You can use these to leave yourself notes, or to explain parts of your code to other users (which is considered best practice).
 
 ```void setup()``` vs. ```void loop()```
+
 Whatever code is placed in ```void setup()``` will be called once immediately when the application starts. It will not be called again. Therefore, this is a good place to declare variables, pin modes, start using libraries, etc.
 
 The ```loop()``` function is called repeatedly from then on. So, any component of your code that accepts changing values (for example, monitoring live sensor input) should go here.
 
 ### Blinking LED
-```
+
+```arduino
 int led = 13;
 
 // the setup routine runs once when you press reset:
-void setup() {                
+void setup() {
   // initialize the digital pin as an output.
-  pinMode(led, OUTPUT);     
+  pinMode(led, OUTPUT);
 }
 
 // the loop routine runs over and over again forever:
@@ -64,12 +66,13 @@ Hopefully the next two lines of code now make sense: the LED is turned off, and 
 When using ```delay()```, all other functions/processes happening in your program will be paused. In other words, nothing happens during a ```delay()```. So, though this is fine for a simple blinking LED, if you were trying to control the time-flow of simultaneous functions at different intervals, you would want to use ```millis()```. The Arduino website recommends avoiding the use of ```delay()``` unless you are only pausing the program for 10s of milliseconds, favoring ```millis()``` for more substantial, human-noticeable amounts of time.
 
 ### Fade
-```/*
+```arduino
+/*
  Fade
- 
+
  This example shows how to fade an LED on pin 9
  using the analogWrite() function.
- 
+
  This example code is in the public domain.
  */
 
@@ -78,25 +81,25 @@ int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;    // how many points to fade the LED by
 
 // the setup routine runs once when you press reset:
-void setup()  { 
+void setup()  {
   // declare pin 9 to be an output:
   pinMode(led, OUTPUT);
-} 
+}
 
 // the loop routine runs over and over again forever:
-void loop()  { 
+void loop()  {
   // set the brightness of pin 9:
-  analogWrite(led, brightness);    
+  analogWrite(led, brightness);
 
   // change the brightness for next time through the loop:
   brightness = brightness + fadeAmount;
 
-  // reverse the direction of the fading at the ends of the fade: 
+  // reverse the direction of the fading at the ends of the fade:
   if (brightness == 0 || brightness == 255) {
-    fadeAmount = -fadeAmount ; 
-  }     
-  // wait for 30 milliseconds to see the dimming effect    
-  delay(30);                            
+    fadeAmount = -fadeAmount ;
+  }
+  // wait for 30 milliseconds to see the dimming effect
+  delay(30);
 }
 ```
 Open the Blink and Fade examples and compare/contrast them. Are there any key differences between the two?
@@ -124,7 +127,7 @@ Ear 1 to ground
 Ear 2 to 5V or 3.3V
 
 Attach a potentiometer to your Arduino and copy the code below into a new window:
-```
+```arduino
 //Potentiometer testing sketch.
 
 int potPin = 0; // Nose of pot is connected to analog 0
@@ -166,7 +169,8 @@ We can use this basic framework for most other sensor input, the only thing that
 *homework:* Download the pdf [here](http://caseythomasanderson.com/casey/sensor_workshop_notes.pdf) and try to use the above patch with other sensors.
 
 As an example: modifying our potentiometer code to utilize a flex sensor:
-```
+
+```arduino
 // Flex sensor test program
 
 // Sensor pin - GND
@@ -182,46 +186,47 @@ int LEDbrightness;
 void setup()
 {
   // initialize serial communications
-  Serial.begin(9600); 
+  Serial.begin(9600);
 }
 
 void loop()
 {
   int sensor, degrees;
-  
+
   // read the voltage from the voltage divider (sensor plus resistor)
   sensor = analogRead(0);
   degrees = map(sensor, 768, 853, 0, 90);
-  
+
   LEDbrightness = map( sensor, 768, 853, 0, 255 )l
   analogWrite(LEDpin, LEDbrightness);
-  
+
   // print out the result
   Serial.print("analog input: ");
   Serial.print(sensor,DEC);
   Serial.print("   degrees: ");
   Serial.println(degrees,DEC);
-  
+
   // pause before taking the next reading
-  delay(10);                     
+  delay(10);
 }
 ```
 ### Smoothing
 
-Sensors are designed to output a changing voltages, but what happens if your sensor is too sensitive or you need to "massage" you data for some reason? We can define any unnecessary information, like the information provided by sensor y in either of the previous cases, as "noise." Certain sensors are so noisey that some amount of work needs to be done to make them not as "nearly random"/more usable. The code below shows one example of how to average x amount of Vin samples (in this case, 10 "samples" or ```Array``` positions) in order to smooth the input to something less chaotic. 
+Sensors are designed to output a changing voltages, but what happens if your sensor is too sensitive or you need to "massage" you data for some reason? We can define any unnecessary information, like the information provided by sensor y in either of the previous cases, as "noise." Certain sensors are so noisey that some amount of work needs to be done to make them not as "nearly random"/more usable. The code below shows one example of how to average x amount of Vin samples (in this case, 10 "samples" or ```Array``` positions) in order to smooth the input to something less chaotic.
 
 Keep in mind, though, that the smaller the ```Array``` (i.e., the less positions in which it can store samples prior to averaging), the more prone to "noiseyness" your averaged data will be. At the same time, though, a smaller ```Array``` will take less time to fill, and therefore be able to output average amounts more quickly.
 
 On the other side of the spectrum, the longer your ```Array``` (i.e. the more position in which it can store samples prior to averaging), the more "smoothed" the data will be. For a particularly noisey sensor, this might be a good strategy (emphasis on "might"). However, the longer the ```Array```, the more positions need to be filled prior to averaging, which will therefore slow down the rate at which you are getting usable information into the Arduino.
-```
+
+```arduino
 /*
 
   Smoothing
 
   Reads repeatedly from an analog input, calculating a running average
-  and printing it to the computer.  Keeps ten readings in an array and 
+  and printing it to the computer.  Keeps ten readings in an array and
   continually averages them.
-  
+
   The circuit:
     * Analog sensor (potentiometer will do) attached to analog input 0
 
@@ -230,7 +235,7 @@ On the other side of the spectrum, the longer your ```Array``` (i.e. the more po
   modified 9 Apr 2012
   by Tom Igoe
   http://www.arduino.cc/en/Tutorial/Smoothing
-  
+
   This example code is in the public domain.
 
 
@@ -253,31 +258,31 @@ int inputPin = A0;
 void setup()
 {
   // initialize serial communication with computer:
-  Serial.begin(9600);                   
-  // initialize all the readings to 0: 
+  Serial.begin(9600);
+  // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++)
-    readings[thisReading] = 0;          
+    readings[thisReading] = 0;
 }
 
 void loop() {
   // subtract the last reading:
-  total= total - readings[index];         
+  total= total - readings[index];
   // read from the sensor:  
-  readings[index] = analogRead(inputPin); 
+  readings[index] = analogRead(inputPin);
   // add the reading to the total:
-  total= total + readings[index];       
+  total= total + readings[index];
   // advance to the next position in the array:  
-  index = index + 1;                    
+  index = index + 1;
 
   // if we're at the end of the array...
-  if (index >= numReadings)              
-    // ...wrap around to the beginning: 
-    index = 0;                           
+  if (index >= numReadings)
+    // ...wrap around to the beginning:
+    index = 0;
 
   // calculate the average:
-  average = total / numReadings;         
+  average = total / numReadings;
   // send it to the computer as ASCII digits
-  Serial.println(average);   
-  delay(1);        // delay in between reads for stability            
+  Serial.println(average);
+  delay(1);        // delay in between reads for stability
 }
 ```
