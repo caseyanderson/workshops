@@ -17,13 +17,13 @@ Note: anything in between carrots (`<` to `>`) denotes user input or user key co
 [Supercollider Mailing List](http://www.birmingham.ac.uk/facilities/ea-studios/research/supercollider/mailinglist.aspx), this is the main place to go for support other than the docs. All of the devs are very active on this list and respond quickly to questions.
 
 ## Download
-Go [here](https://supercollider.github.io/download.html) to download SuperCollider. Once your download is complete, go ahead and install the program.
+Go [here](https://supercollider.github.io/download.html) to download SuperCollider. Once your download is complete, go ahead and install install.
 
 ## About
 Supercollider is made up of two applications: a language interpreter and one or more synthesis servers. All communication between the `lang` (short for language) and the `server` is done via [OpenSoundControl](http://opensoundcontrol.org/).
 
-## Making Sound
-In order to make sound the server must be running. Type the following into a new window <Command+N> and then hit <Shift + Enter> on the same line to execute the code:
+## Starting the server
+In order to make sound the server must be running. Type the following into a new window (`<Command+N>` makes a new window) and then hit `<Shift + Enter>` on the same line to execute the code:
 
 ```SuperCollider
 s.boot;
@@ -31,7 +31,7 @@ s.boot;
 
 Here `s` refers to the `localhost` server on your CPU.
 
-Which generally results in something like this in the post window:
+`s.boot;` generally results in something like this in the post window:
 
 ```SuperCollider
 Welcome to SuperCollider 3.6.6. For help type cmd-d.
@@ -74,3 +74,31 @@ One can quit the server by executing the following code:
 ```SuperCollider
 s.quit;
 ```
+
+## Functions
+Similar to most other programming language, Functions in SC are denoted by the use of curly brackets. Anything between `{ }` is a function.
+
+*For Example*
+
+```SuperCollider
+f = { "hello world!".postln; }
+f.value;
+```
+
+The first line of code stores the function at `f`, whereas the second line returns the `value` (in this case, prints the message "hellow world!" to the post window) associated with the function.
+
+## Arguments within Functions
+Arguments allow one to pass values to a function when the function is called.
+
+*For Example*
+
+```SuperCollider
+(
+f = { arg a, b;
+    a - b;
+};
+f.value(5, 3);
+)
+```
+
+In the above code, evaluating the `f.value(5,3)` results in the number `2` at the post.
