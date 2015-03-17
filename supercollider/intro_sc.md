@@ -142,14 +142,25 @@ SC also has an oscilloscope function which will display the waveform in realtime
 
 *For Example*
 ```supercollider
-{ SinOsc.ar(440, 0, 0.2) }.scope;
+{ SinOsc.ar(440, 0, 0.2);
+    LFTri.ar( 440, 0, 0.2 ); }.scope;
 ```
 
 Which will result in this:
 ![test](sineshot2.png)
 
+## .play
+
+```supercollider
+{ SinOsc.ar(440, 0, 0.2) }.play;
+```
+
+`.plot`, `.scope`, and `.play` are all methods that change the way a function is evaluated. While .scope plots the function over time, and oscilloscope shows a real-time plot of the waveform, both of those methods are generally used for testing and not for performance or recording.
+
+## Ugens
+
 ## External Control
 
 ```supercollider
-{ SinOsc.ar(440, 0.0, MouseX.kr( 0.0, 1.0 )); }.scope;
+{ SinOsc.ar(MouseY.kr( 50, 2000), 0.0, MouseX.kr( 0.0, 1.0 )); }.scope;
 ```
