@@ -14,7 +14,7 @@ Note: anything in between carrots (`<` to `>`) denotes user input or user key co
 
 [SCTweets](http://sctweets.tumblr.com/), supercollider code in 140 characters or less (frequently amazing).
 
-[Supercollider Mailing List](http://www.birmingham.ac.uk/facilities/ea-studios/research/supercollider/mailinglist.aspx), this is the main place to go for support other than the docs. All of the devs are very active on this list and respond quickly to questions.
+[SC Mailing List](http://www.birmingham.ac.uk/facilities/ea-studios/research/supercollider/mailinglist.aspx), this is the main place to go for support other than the docs. All of the devs are very active on this list and respond quickly to questions.
 
 ## Download
 Go [here](https://supercollider.github.io/download.html) to download SuperCollider. Once your download is complete, go ahead and install install.
@@ -139,3 +139,14 @@ SC allows one to plot sounds like this onto a graph with `.scope`. This is usefu
 Which will result in this:
 
 ![test](sineshot1.png)
+
+SC also has an oscilloscope function which will display the waveform in realtime while also playing it:
+
+*For Example*
+```supercollider
+{ SinOsc.ar(440, 0, 0.2) }.scope;
+```
+
+Which will result in this:
+
+![test](sineshot2.png)
