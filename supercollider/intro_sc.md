@@ -138,4 +138,4 @@ SC allows one to plot sounds like this onto a graph with `.scope`. This is usefu
 
 Which will result in this:
 
-![test](sin_plot_1.png)
+![test](sineshot1.png)
