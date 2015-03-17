@@ -171,6 +171,17 @@ x = { SinOsc.ar(440, 0, 0.2) }.play;
 //lets wait a moment
 x.release;
 ```
+Interestingly enough, one can call `.scope` on the entire output of the server. Think of this like putting everything that is currently happening in SC through an oscilloscope.
+
+*For Example*
+
+```supercollider
+{ [SinOsc.ar(440, 0, 0.4), LFTri.ar(220, 0.0, 0.2) ] }.play;
+s.scope;
+```
+results in:
+
+![test](shot3.png)
 
 ## Ugens
 
