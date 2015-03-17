@@ -153,20 +153,19 @@ While `.plot` plots the function over time, and `.scope` shows a real-time plot 
 
 ## .play
 
-Though it is generally used to listen to a function while it is playing, `.play` simply tells the server to start a process. The result of that process starting depends on the function, but generally `.play` will allow one to monitor (i.e. hear) whatever `UGens` or `SynthDefs` are inside of it.
+`.play` simply tells the server to start a process. The result of that process depends on the function, but generally `.play` will allow one to monitor (i.e. hear) whatever `UGens` or `SynthDefs` are inside of it.
 
 ```supercollider
 { SinOsc.ar(440, 0, 0.2) }.play;
 ```
 
-The opposit of `.play` is `.stop`, however one would need to store an instance of the function in a variable in order to be able to use `.stop`. Similarly, `{ ... }` returns a function, whereas `{ ... }.play` returns a `Synth` object. `Synth` objects do not have a `.stop` method, so one must either `.free` or `.release` them in order to stop the sound.
+`{ ... }` returns a function (which can be killed with `.stop`), whereas `{ ... }.play` returns a `Synth` object. `Synth` objects do not have a `.stop` method, so one must either `.free` or `.release` them in order to stop the sound.
 
 *For Example*
 ```supercollider
-x = { SinOsc.ar(440, 0, 0.2) };
-x.play;
-//lets give this a moment
-x.stop;
+x = { SinOsc.ar(440, 0, 0.2) }.play;
+//lets wait a moment
+x.release;
 ```
 
 ## Ugens
@@ -176,5 +175,3 @@ x.stop;
 ```supercollider
 { SinOsc.ar(MouseY.kr( 50, 2000), 0.0, MouseX.kr( 0.0,1.0 )); }.scope;
 ```
-
-blah blah blah
