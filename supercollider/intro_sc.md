@@ -128,7 +128,7 @@ Functions are used to make sound in SC. Execute the line below and, when you wan
 
 The code above plays a [Sine Wave](https://en.wikipedia.org/wiki/Sine_wave) with a frequency of 440Hz and an amplitude of 0.2 (amplitude, or what one can think of as volume, is generally kept within the range 0.0 to 1.0 in SC).
 
-SC allows one to plot sounds like this onto a graph with `.scope`. This is useful if your sound is less deterministic than the above or if you need to check why something you are trying to do is inaudible or whatever.
+SC allows one to plot sounds like this onto a graph with `.plot`. This is useful if your sound is less deterministic than the above or if you need to check why something you are trying to do is inaudible or whatever.
 
 *For Example*
 ```supercollider
@@ -138,7 +138,7 @@ SC allows one to plot sounds like this onto a graph with `.scope`. This is usefu
 Which will result in this:
 ![test](sineshot1.png)
 
-SC also has an oscilloscope function which will display the waveform in realtime while also playing it:
+SC also has an oscilloscope method (`.scope`) which will display the changing waveform while playing it:
 
 *For Example*
 ```supercollider
@@ -149,18 +149,32 @@ SC also has an oscilloscope function which will display the waveform in realtime
 Which will result in this:
 ![test](sineshot2.png)
 
+While `.plot` plots the function over time, and `.scope` shows a real-time plot of the waveform, both of those methods are generally used for testing and not for performance or recording.
+
 ## .play
+
+Though it is generally used to listen to a function while it is playing, `.play` simply tells the server to start a process. The result of that process starting depends on the function, but generally `.play` will allow one to monitor (i.e. hear) whatever `UGens` or `SynthDefs` are inside of it.
 
 ```supercollider
 { SinOsc.ar(440, 0, 0.2) }.play;
 ```
 
-`.plot`, `.scope`, and `.play` are all methods that change the way a function is evaluated. While .scope plots the function over time, and oscilloscope shows a real-time plot of the waveform, both of those methods are generally used for testing and not for performance or recording.
+The opposit of `.play` is `.stop`, however one would need to store an instance of the function in a variable in order to be able to use `.stop`. Similarly, `{ ... }` returns a function, whereas `{ ... }.play` returns a `Synth` object. `Synth` objects do not have a `.stop` method, so one must either `.free` or `.release` them in order to stop the sound.
+
+*For Example*
+```supercollider
+x = { SinOsc.ar(440, 0, 0.2) };
+x.play;
+//lets give this a moment
+x.stop;
+```
 
 ## Ugens
 
 ## External Control
 
 ```supercollider
-{ SinOsc.ar(MouseY.kr( 50, 2000), 0.0, MouseX.kr( 0.0, 1.0 )); }.scope;
+{ SinOsc.ar(MouseY.kr( 50, 2000), 0.0, MouseX.kr( 0.0,1.0 )); }.scope;
 ```
+
+blah blah blah
