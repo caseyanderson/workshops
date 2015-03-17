@@ -17,7 +17,7 @@ Note: anything in between carrots (`<` to `>`) denotes user input or user key co
 [SC Mailing List](http://www.birmingham.ac.uk/facilities/ea-studios/research/supercollider/mailinglist.aspx), this is the main place to go for support other than the docs. All of the devs are very active on this list and respond quickly to questions.
 
 ## Download
-Go [here](https://supercollider.github.io/download.html) to download SuperCollider. Once your download is complete, go ahead and install install.
+Go [here](https://supercollider.github.io/download.html) to download SuperCollider. Once your download is complete, go ahead and install.
 
 ## About
 Supercollider is made up of two applications: a language interpreter and one or more synthesis servers. All communication between the `lang` (short for language) and the `server` is done via [OpenSoundControl](http://opensoundcontrol.org/).
@@ -141,6 +141,7 @@ Which will result in this:
 SC also has an oscilloscope method (`.scope`) which will display the changing waveform while playing it:
 
 *For Example*
+
 ```supercollider
 { SinOsc.ar(440, 0, 0.2);
     LFTri.ar( 440, 0, 0.2 ); }.scope;
@@ -153,15 +154,18 @@ While `.plot` plots the function over time, and `.scope` shows a real-time plot 
 
 ## .play
 
-`.play` simply tells the server to start a process. The result of that process depends on the function, but generally `.play` will allow one to monitor (i.e. hear) whatever `UGens` or `SynthDefs` are inside of it.
+`.play` simply tells the server to start a process. The result of that process depends on the function.
+
+*For Example*
 
 ```supercollider
 { SinOsc.ar(440, 0, 0.2) }.play;
 ```
 
-`{ ... }` returns a function (which can be killed with `.stop`), whereas `{ ... }.play` returns a `Synth` object. `Synth` objects do not have a `.stop` method, so one must either `.free` or `.release` them in order to stop the sound.
+So, `{ ... }` returns a function (which can be killed with `.stop`), whereas `{ ... }.play` returns a `Synth` object. `Synth` objects do not have a `.stop` method, so one must either `.free` or `.release` them in order to stop the sound.
 
 *For Example*
+
 ```supercollider
 x = { SinOsc.ar(440, 0, 0.2) }.play;
 //lets wait a moment
