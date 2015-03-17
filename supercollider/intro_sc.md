@@ -87,7 +87,7 @@ f.value;
 
 The first line of code stores the function at `f`, whereas the second line returns the `value` (in this case, prints the message "hellow world!" to the post window) associated with the function.
 
-## Arguments within Functions
+## Arguments and Variables within Functions
 Arguments allow one to pass values to a function when the function is called.
 
 *For Example*
@@ -102,3 +102,21 @@ f.value(5, 3);
 ```
 
 In the above code, evaluating the `f.value(5,3)` results in the number `2` at the post.
+
+And, of course, one can also use variables in functions.
+
+*For Example*
+
+```supercollider
+(
+f = { arg a, b;
+    var firstResult, finalResult;
+    firstResult = a + b;
+    finalResult = firstResult * 2;
+    finalResult;
+};
+f.value(2, 3);    // this will return (2 + 3) * 2 = 10
+)
+```
+
+### Making Sound
