@@ -101,7 +101,7 @@ f.value(5, 3);
 )
 ```
 
-In the above code, evaluating the `f.value(5,3)` results in the number `2` at the post.
+In the above code, evaluating the `f.value(5, 3)` results in the number `2` at the post.
 
 And, of course, one can also use variables in functions.
 
@@ -119,4 +119,23 @@ f.value(2, 3);    // this will return (2 + 3) * 2 = 10
 )
 ```
 
-### Making Sound
+## Making Sound
+Functions are used to make sound in SC. Execute the line below and, when you want it to stop, just type `<Command + .>`.
+
+```supercollider
+{ SinOsc.ar(440, 0, 0.2) }.play;
+```
+
+The code above plays a [Sine Wave](https://en.wikipedia.org/wiki/Sine_wave) with a frequency of 440Hz and an amplitude of 0.2 (amplitude, or what one can think of as volume, is generally kept within the range 0.0 to 1.0 in SC).
+
+SC allows one to plot sounds like this onto a graph with `.scope`. This is useful if your sound is less deterministic than the above or if you need to check why something you are trying to do is inaudible or whatever.
+
+*For Example*
+
+```supercollider
+{ SinOsc.ar(440, 0, 0.2) }.plot;
+```
+
+Which will result in this:
+
+https://raw.github.com/caseyanderson/workshops/master/supercollider/sin_plot_1.png
