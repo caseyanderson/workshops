@@ -1,6 +1,6 @@
 # Supercollider
 
-Note: anything in between carrots (`<` to `>`) denotes user input.
+Note: anything in between carrots (`<` to `>`) denotes user input or user key commands.
 
 *Quick reference links*
 
@@ -23,7 +23,54 @@ Go [here](https://supercollider.github.io/download.html) to download SuperCollid
 Supercollider is made up of two applications: a language interpreter and one or more synthesis servers. All communication between the `lang` (short for language) and the `server` is done via [OpenSoundControl](http://opensoundcontrol.org/).
 
 ## Making Sound
-Boot the Server:
+In order to make sound the server must be running. Type the following into a new window <Command+N> and then hit <Shift + Enter> on the same line to execute the code:
+
 ```SuperCollider
-s.boot
+s.boot;
+```
+
+Here `s` refers to the `localhost` server on your CPU.
+
+Which generally results in something like this in the post window:
+
+```SuperCollider
+Welcome to SuperCollider 3.6.6. For help type cmd-d.
+localhost
+Found 0 LADSPA plugins
+Number of Devices: 16
+   0 : "AirPlay"
+   1 : "Built-in Microph"
+   2 : "Built-in Output"
+   3 : "After Effects 10.5"
+   4 : "After Effects 11.0"
+   5 : "After Effects 11.0.1"
+   6 : "After Effects 11.0.2"
+   7 : "After Effects 12.0"
+   8 : "After Effects 12.2"
+   9 : "After Effects 13.0"
+   10 : "Prelude 1.0"
+   11 : "Prelude 2.0"
+   12 : "Premiere Pro 5.5"
+   13 : "Premiere Pro 6.0"
+   14 : "Premiere Pro 7.0"
+   15 : "Premiere Pro 8.0"
+
+"Built-in Microph" Input Device
+   Streams: 1
+      0  channels 2
+
+"Built-in Output" Output Device
+   Streams: 1
+      0  channels 2
+
+SC_AudioDriver: sample rate = 44100.000000, driver's block size = 512
+SuperCollider 3 server ready.
+Receiving notification messages from server localhost
+Shared memory server interface initialized
+```
+
+One can quit the server by executing the following code:
+
+```SuperCollider
+s.quit;
 ```
