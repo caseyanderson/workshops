@@ -131,13 +131,11 @@ The code above plays a [Sine Wave](https://en.wikipedia.org/wiki/Sine_wave) with
 SC allows one to plot sounds like this onto a graph with `.scope`. This is useful if your sound is less deterministic than the above or if you need to check why something you are trying to do is inaudible or whatever.
 
 *For Example*
-
 ```supercollider
 { SinOsc.ar(440, 0, 0.2) }.plot;
 ```
 
 Which will result in this:
-
 ![test](sineshot1.png)
 
 SC also has an oscilloscope function which will display the waveform in realtime while also playing it:
@@ -148,5 +146,10 @@ SC also has an oscilloscope function which will display the waveform in realtime
 ```
 
 Which will result in this:
-
 ![test](sineshot2.png)
+
+## External Control
+
+```supercollider
+{ SinOsc.ar(440, 0.0, MouseX.kr( 0.0, 1.0 )); }.scope;
+```
