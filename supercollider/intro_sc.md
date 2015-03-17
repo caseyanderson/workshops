@@ -25,7 +25,7 @@ Supercollider is made up of two applications: a language interpreter and one or 
 ## Starting the server
 In order to make sound the server must be running. Type the following into a new window (`<Command+N>` makes a new window) and then hit `<Shift + Enter>` on the same line to execute the code:
 
-```SuperCollider
+```supercollider
 s.boot;
 ```
 
@@ -33,7 +33,7 @@ Here `s` refers to the `localhost` server on your CPU.
 
 `s.boot;` generally results in something like this in the post window:
 
-```SuperCollider
+```supercollider
 Welcome to SuperCollider 3.6.6. For help type cmd-d.
 localhost
 Found 0 LADSPA plugins
@@ -71,7 +71,7 @@ Shared memory server interface initialized
 
 One can quit the server by executing the following code:
 
-```SuperCollider
+```supercollider
 s.quit;
 ```
 
@@ -80,7 +80,7 @@ Similar to most other programming language, Functions in SC are denoted by the u
 
 *For Example*
 
-```SuperCollider
+```supercollider
 f = { "hello world!".postln; }
 f.value;
 ```
@@ -92,7 +92,7 @@ Arguments allow one to pass values to a function when the function is called.
 
 *For Example*
 
-```SuperCollider
+```supercollider
 (
 f = { arg a, b;
     a - b;
