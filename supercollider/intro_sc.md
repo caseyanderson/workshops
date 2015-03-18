@@ -254,10 +254,10 @@ A longer example (which also demonstrates OSC controller stuff, private fx busse
 SynthDef( \play, { | amp = 0.9, dur = 1, trig = 1, bufnum, rate = 1, effectsBus |
 	var env, line, play, sig;
 
-	env = EnvGen.kr( Env.asr( 0.01, amp, 0.01 ), trig, doneAction: 2 );
+	env = EnvGen.kr( Env.asr( 0.01, amp, 0.01 ), trig, doneAction: 2 );        //notice that doneAction is set to 2 here
 	line = Line.kr( 0.0, 1.5, dur, 0.9, doneAction: 0 );
 	play = PlayBuf.ar( 1, bufnum, line, loop: 1 ) * env;
-	Out.ar( effectsBus, play );
+	Out.ar( effectsBus, play );        //so this sample is being played, but not monitored (i.e. not audible) on a bus
 }).add;
 
 SynthDef( \bpf_delay, { | inBus, bD = 0.0, maxd = 2, delaytime = 0.0, freq = 0.0, trig = 0, rq = 0.5, sF, dur, amp = 0.0 |
