@@ -81,7 +81,7 @@ Similar to most other programming language, Functions in SC are denoted by the u
 *For Example*
 
 ```supercollider
-f = { "hello world!".postln; }
+f = { "hello world!".postln; };
 f.value;
 ```
 
@@ -220,10 +220,92 @@ BTW, Crackle and Dust are my absolute favorite noise UGens/Random number generat
 
 ## SynthDefs
 
-SC has an optimized way of taking in information about `UGens` and their interconnections: `SynthDef`s. A `SynthDef` tells the server how to generate audio and translates that information to bite code. You can think of a `SynthDef` and its resulting `Synth` in a similar manner that one thinks about classes and objects: a `SynthDef` is the skeleton that defines a particular instance of a playing `Synth`.
+SC has an optimized way of taking in information about `UGens` and their interconnections: `SynthDef`s. A `SynthDef` tells the server how to generate audio and translates that information to bite code. You can think of a `SynthDef` and its resulting `Synth` in a similar manner that one thinks about classes and objects: a `SynthDef` is the skeleton that defines a particular  instance of a playing `Synth`.
 
 There are two basic design patterns for SynthDef's. Choosing one over the other depends on what you need:
 
+### mute/unmute neverending synth
+
+```supercollider
+SynthDef( \sin,	{ | amp = 0.0, freq = 440, trig = 0 |
+	var env, sig;
+	env = EnvGen.kr( Env.asr( 0.001, 0.9, 0.001 ), trig, doneAction: 0 );
+	sig = SinOsc.ar( [ freq, freq * 0.999 ], 0.0, amp ) * env;
+	Out.ar( [ 0, 1 ], sig * 0.6 );
+}).add;
+
+x = Synth( \sin, [ \freq, 400, \amp, 0.9]);     //this plays a \sin object and stores it at x
+
+x.set(\trig, 1);        //uses the .set class to change the \trig argument to 1, which unmutes our running synth
+x.set(\trig, 0 );       //.set mutes the synth by setting \trig back to 0
+
+s.scope;                    //send server output through the scope
+```
+
 ### create a new synth instance on trig
 
-### mute/unmute neverending synth
+A longer example (which includes some OSC controller stuff):
+
+```supercollider
+~bSamp = Buffer.read( s, "/Users/mdp/Desktop/salton_sea_test_tracks_01_12_14.wav" );
+~len = ((~bSamp.numFrames)/(~bSamp.sampleRate));
+
+(
+SynthDef( \play, { | amp = 0.9, dur = 1, trig = 1, bufnum, rate = 1, effectsBus |
+	var env, line, play, sig;
+
+	env = EnvGen.kr( Env.asr( 0.01, amp, 0.01 ), trig, doneAction: 2 );
+	line = Line.kr( 0.0, 1.5, dur, 0.9, doneAction: 0 );
+	play = PlayBuf.ar( 1, bufnum, line, loop: 1 ) * env;
+	Out.ar( effectsBus, play );
+}).add;
+
+SynthDef( \bpf_delay, { | inBus, bD = 0.0, maxd = 2, delaytime = 0.0, freq = 0.0, trig = 0, rq = 0.5, sF, dur, amp = 0.0 |
+	var delay, env, in, line;
+
+	in = In.ar( inBus, 2 );
+	line = Line.kr( Rand(sF, sF * 12), Rand(sF, sF * 12), dur );
+	delay = BPF.ar( DelayN.ar( in, maxd, Rand(0.01, maxd ) ), line, rq, amp);
+	env = EnvGen.kr( Env.perc( 0.01, dur, amp ), trig, doneAction: 2 );
+	Out.ar( [ 0, 1 ], env * delay);
+}).add;
+
+)
+
+b = Bus.audio(s, 2 );
+~vol = Bus.control(s, 1).set(0.99);
+~dur = Bus.control(s, 1).set(20.0);
+~rq  = Bus.control(s, 1).set(0.3);
+
+~y = Synth(\play, [\amp, 0.99, \trig, 1, \dur, ~len, \bufnum, ~bSamp, \effectsBus, b.index ]);
+
+// OSC
+OSCFunc({|msg, time, addr, recvPort|
+	var grain1, num, dur;
+
+	if( msg[1] == 1,{
+		Synth.after(~y, \bpf_delay, [\inBus, b.index, \sF, 50, \trig, 1, \dur, ~dur.asMap, \rq, ~rq.asMap, \amp, ~vol.asMap ] );
+	});
+}, '/1/push1');
+
+OSCFunc({|msg, time, addr, recvPort|
+//	msg[1].postln;
+	~vol.set(msg[1] );
+}, '/1/fader1');
+
+OSCFunc({|msg, time, addr, recvPort|
+	var len;
+	len = msg[1].linlin( 0.0, 1.0, 5, 40 );
+//	len.postln;
+	~dur.set( len );
+}, '/1/fader2');
+
+OSCFunc({|msg, time, addr, recvPort|
+	var len;
+	len = msg[1].linlin( 0.0, 1.0, 0.1, 0.01 );
+//	len.postln;
+	~rq.set( len );
+}, '/1/fader3');
+
+s.scope;
+```
