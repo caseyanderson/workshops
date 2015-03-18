@@ -1,4 +1,5 @@
 # Supercollider
+*Spring 2015*
 
 Note: anything in between carrots (`<` to `>`) denotes user input or user key commands.
 
@@ -263,8 +264,8 @@ SynthDef( \play, { | amp = 0.9, dur = 1, trig = 1, bufnum, rate = 1, effectsBus 
 SynthDef( \bpf_delay, { | inBus, bD = 0.0, maxd = 2, delaytime = 0.0, freq = 0.0, trig = 0, rq = 0.5, sF, dur, amp = 0.0 |
 	var delay, env, in, line;
 
-	in = In.ar( inBus, 2 );
-	line = Line.kr( Rand(sF, sF * 12), Rand(sF, sF * 12), dur );
+	in = In.ar( inBus, 2 );                    //here i establish a way to read input from elsewhere into this Synth
+	line = Line.kr( Rand(sF, sF * 12), Rand(sF, sF * 12), dur );           //i use lots of random number generators on prototyping stuff, here is an example of one way of doing this
 	delay = BPF.ar( DelayN.ar( in, maxd, Rand(0.01, maxd ) ), line, rq, amp);
 	env = EnvGen.kr( Env.perc( 0.01, dur, amp ), trig, doneAction: 2 );
 	Out.ar( [ 0, 1 ], env * delay);
@@ -272,8 +273,8 @@ SynthDef( \bpf_delay, { | inBus, bD = 0.0, maxd = 2, delaytime = 0.0, freq = 0.0
 
 )
 
-b = Bus.audio(s, 2 );
-~vol = Bus.control(s, 1).set(0.99);
+b = Bus.audio(s, 2 );                   //make an audio bus
+~vol = Bus.control(s, 1).set(0.99);     //make and set a control bus (ditto next two lines)
 ~dur = Bus.control(s, 1).set(20.0);
 ~rq  = Bus.control(s, 1).set(0.3);
 
