@@ -185,8 +185,45 @@ results in:
 
 ## Ugens
 
-## External Control
+`UGens` can be used to output audio (with the `.ar`, or audio rate, class method) or control information (with the `.kr`, or control rate, class method).
+
+*For Example*
+
+```supercollider
+(
+{ var ampOsc;
+    ampOsc = SinOsc.kr(0.5, 1.5pi, 0.5, 0.5);
+    SinOsc.ar(440, 0, ampOsc);
+}.play;
+)
+```
+
+In the above example, the `SinOsc` `UGen` is used both as control rate (to change the amplitude of the sounding `SinOsc`) and as audio rate (to actually play the `Sine` tone).
+
+Another example that uses Mouse location (both x and y axes) for frequency and amplitude:
 
 ```supercollider
 { SinOsc.ar(MouseY.kr( 50, 2000), 0.0, MouseX.kr( 0.0,1.0 )); }.scope;
 ```
+
+## Additive Synthesis
+
+Additive Synthesis is a general term that refers to the technique of playing more than one sound simultaneously to create a more complex sound. This is also typically referred to as "summing" signals.
+
+*For Example*
+
+```supercollider
+{ SinOsc.ar( 440, 0.0, 0.5 ) + PinkNoise.ar( 0.1 ) + Crackle.ar( 1.5, 0.4 ) + LFTri.ar( 200, 0.0, 0.2 )}.play;
+```
+
+BTW, Crackle and Dust are my absolute favorite noise UGens/Random number generators. Be careful with Crackle, it explodes easily (and this especially sucks if you are monitoring SC via headphones).
+
+## SynthDefs
+
+SC has an optimized way of taking in information about `UGens` and their interconnections: `SynthDef`s. A `SynthDef` tells the server how to generate audio and translates that information to bite code. You can think of a `SynthDef` and its resulting `Synth` in a similar manner that one thinks about classes and objects: a `SynthDef` is the skeleton that defines a particular instance of a playing `Synth`.
+
+There are two basic design patterns for SynthDef's. Choosing one over the other depends on what you need:
+
+### create a new synth instance on trig
+
+### mute/unmute neverending synth
