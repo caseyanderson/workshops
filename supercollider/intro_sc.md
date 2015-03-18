@@ -244,7 +244,7 @@ s.scope;                    //send server output through the scope
 
 ### create a new synth instance on trig
 
-A longer example (which includes some OSC controller stuff):
+A longer example (which also demonstrates OSC controller stuff, private fx busses, and sample playback):
 
 ```supercollider
 ~bSamp = Buffer.read( s, "/Users/mdp/Desktop/salton_sea_test_tracks_01_12_14.wav" );
