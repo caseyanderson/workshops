@@ -282,7 +282,6 @@ b = Bus.audio(s, 2 );                   //make an audio bus
 
 // OSC
 OSCFunc({|msg, time, addr, recvPort|
-	var grain1, num, dur;
 
 	if( msg[1] == 1,{
 		Synth.after(~y, \bpf_delay, [\inBus, b.index, \sF, 50, \trig, 1, \dur, ~dur.asMap, \rq, ~rq.asMap, \amp, ~vol.asMap ] );
