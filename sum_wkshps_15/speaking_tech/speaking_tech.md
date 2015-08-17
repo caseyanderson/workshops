@@ -1,11 +1,14 @@
 # Speaking Technologically
 
-### General Technology References
+### General Technology Reference
 
+*Practical Electronics for Inventors*, Paul Scherz and Simon Monk
 
-### Referenced
+*The Art of Electronics*, Horwitz and Hill
 
-*My Life*, Lyn Hejinian
+*Handmade Electronic Music*, Nicolas Collins
+
+### Examples
 
 *Never Again*, Doug Nufer
 
