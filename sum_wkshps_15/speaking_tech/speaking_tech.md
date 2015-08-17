@@ -1,4 +1,5 @@
 # Speaking Technologically
+*Casey Anderson, Summer 2015*
 
 ### General Technology Reference
 
@@ -10,7 +11,7 @@
 
 ### Examples
 
-*[Never Again](/examples/eunoia)*, Doug Nufer
+*Never Again*, Doug Nufer
 
 *Eunoia*, Christian Bök
 
