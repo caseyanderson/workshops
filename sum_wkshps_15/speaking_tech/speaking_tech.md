@@ -10,7 +10,7 @@
 
 ### Examples
 
-*Never Again*, Doug Nufer
+*[Never Again](/examples/eunoia)*, Doug Nufer
 
 *Eunoia*, Christian Bök
 
