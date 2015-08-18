@@ -11,6 +11,8 @@
 
 ### Examples
 
+(operative question: which of these could be either written/created or performed/executed by a computer/machine?)
+
 *Never Again*, Doug Nufer
 
 *Eunoia*, Christian Bök
@@ -23,7 +25,7 @@
 
 *Three Voices*, G. Douglas Barrett
 
-Covered
+### Covered
 
 Definitions: technology, computer, algorithm
 
