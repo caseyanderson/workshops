@@ -65,7 +65,7 @@ In [21]: del d['age']
 In [22]: d
 Out[22]: {'hair': 'bald', 'name': 'boris'}
 ```
-So the value `'40'` has now been removed from the `dict d` at the index (or in this case, key) `'hair'`.
+So the value `'40'` has now been removed from the `dict d` at the index (or in this case, key) `'age'`.
 
 #### Using pop
 ```python

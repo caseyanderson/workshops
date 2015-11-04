@@ -18,7 +18,7 @@ any character surrounded by quotes. Quotes must be balanced. In other words, I c
 
 ```python
 a = 'this'
-..a = “this”
+a = "this"
 #but not:
 a = 'this
 #See the difference there?
