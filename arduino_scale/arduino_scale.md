@@ -1,6 +1,6 @@
 # Scalability on the Arduino
 
-Every program in Arduino uses two functions (as a reminder, you know something is a function if it is prepended with the word `void`. Those functions are `void setup` and `void loop`. What do each of them do? How do you make use of each of these functions specifically?
+Every program in Arduino uses two functions (as a reminder, you know something is a function if it is prepended with the word `void`): `void setup` and `void loop`. What do each of them do? How do you make use of each of these functions specifically?
 
 Let's start by looking at the normal way one blinks an LED on Arduino:
 
