@@ -1,6 +1,43 @@
-<h2>LAB: more timing strategies</h2>
-<br/>As a quick review, here is the code we were looking at last week (demonstrating a timer in arduino):
-<pre class="lang:arduino decode:true " >
+# Scalability on the Arduino
+
+Let's start by looking at the normal way one blinks an LED on Arduino:
+
+```
+/*
+  Blink
+  Turns on an LED on for one second, then off for one second, repeatedly.
+
+  Most Arduinos have an on-board LED you can control. On the Uno and
+  Leonardo, it is attached to digital pin 13. If you're unsure what
+  pin the on-board LED is connected to on your Arduino model, check
+  the documentation at http://www.arduino.cc
+
+  This example code is in the public domain.
+
+  modified 8 May 2014
+  by Scott Fitzgerald
+ */
+
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 13 as an output.
+  pinMode(13, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);              // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);              // wait for a second
+}
+
+```
+
+In this code we rely on the `delay()` function to halt the Arduino's progression through the loop.
+
+```
     /* Blink without Delay
 
  Turns on and off a light emitting diode(LED) connected to a digital
@@ -65,12 +102,15 @@ void loop()
   }
   delay(3);
 }
-</pre>
-<br/>So this blinks one LED, which is fine, but what if we want to blink two LEDs via timer?
-<br/>Here is one solution to converting our  <span class="lang:arduino decode:true  crayon-inline " >millis()</span>  timer into a reusable function. It uses a totally different design pattern than what we have been looking at in Arduino, so take some time to try to figure it out/play with it. How does this work?
-<br/>Flasher class, and this example, sourced from Adafruit.
+```
 
-<pre class="lang:arduino decode:true " >class Flasher
+So this blinks one LED, which is fine, but what if we want to blink two LEDs via timer?
+
+Here is one solution to converting our  `millis()` timer into a reusable function. It uses a totally different design pattern than what we have been looking at in Arduino, so take some time to try to figure it out/play with it. How does this work?
+
+Flasher class, and this example, sourced from Adafruit.
+
+```
 {
 	// Class Member Variables
 	// These are initialized at startup
@@ -130,4 +170,4 @@ void loop()
 	led1.Update();
 	led2.Update();
 }
-</pre>
+```
