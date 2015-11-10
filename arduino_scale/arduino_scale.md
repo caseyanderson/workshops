@@ -4,7 +4,7 @@ Every program in Arduino uses two functions (as a reminder, you know something i
 
 Let's start by looking at the normal way one blinks an LED on Arduino:
 
-```
+```arduino
 /*
   Blink
   Turns on an LED on for one second, then off for one second, repeatedly.
@@ -48,7 +48,7 @@ To start, let's compare the [millis()](https://www.arduino.cc/en/Reference/Milli
 
 Now let's go through a modified version of the blink example  as a way to analyze the differences between `delay()` and `millis()`:
 
-```
+```arduino
     /* Blink without Delay
 
  Turns on and off a light emitting diode(LED) connected to a digital
@@ -124,7 +124,7 @@ Here is one solution to converting our  `millis()` timer into a reusable functio
 
 Flasher class, and this example, sourced from Adafruit.
 
-```
+```arduino
 {
 	// Class Member Variables
 	// These are initialized at startup
