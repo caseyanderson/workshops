@@ -35,7 +35,16 @@ void loop() {
 
 ```
 
-In this code we rely on the `delay()` function to halt the Arduino's progression through the loop. While `delay()`  is fine for basic implementation on the Arduino, an investigation of the reference document for this function points out an issue: `delay()` "Pauses the program for the amount of time (in miliseconds) specified as parameter."
+In this code we rely on the `delay()` function to halt the Arduino's progression through the loop. While `delay()`  is fine for basic implementation on the Arduino, an investigation of the reference document for this function points out an issue: `delay()` "Pauses the program for the amount of time (in miliseconds) specified as parameter." In other words, when one calls `delay()` the arduino **stops progressing through the file until x amount of ms has passed**. This is not an issue if we only want to blink one LED, but if you need to blink an LED while simultaneously reading values from a sensor, `delay()` will prevent some sensor readings from getting through.
+
+So, let's take a look at an alternative to `delay()` (it's called `millis()`) as well as an alternate design pattern geared towards asynchronous, scalable behavior.
+
+# goodbye delay(), hello millis()
+
+To start, let's compare the [millis()](https://www.arduino.cc/en/Reference/Millis) help file to the [delay()](https://www.arduino.cc/en/Reference/Delay) file. How are they similar? How are they different?
+
+
+Now let's go through a modified version of the blink example  as a way to analyze the differences between `delay()` and `millis()`:
 
 ```
     /* Blink without Delay
@@ -104,7 +113,7 @@ void loop()
 }
 ```
 
-So this blinks one LED, which is fine, but what if we want to blink two LEDs via timer?
+# scaling up
 
 Here is one solution to converting our  `millis()` timer into a reusable function. It uses a totally different design pattern than what we have been looking at in Arduino, so take some time to try to figure it out/play with it. How does this work?
 
