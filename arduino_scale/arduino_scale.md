@@ -35,7 +35,7 @@ void loop() {
 
 ```
 
-In this code we rely on the `delay()` function to halt the Arduino's progression through the loop.
+In this code we rely on the `delay()` function to halt the Arduino's progression through the loop. While `delay()`  is fine for basic implementation on the Arduino, an investigation of the reference document for this function points out an issue: `delay()` "Pauses the program for the amount of time (in miliseconds) specified as parameter."
 
 ```
     /* Blink without Delay
