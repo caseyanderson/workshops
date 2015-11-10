@@ -1,5 +1,7 @@
 # Scalability on the Arduino
 
+Every program in Arduino uses two functions (as a reminder, you know something is a function if it is prepended with the word `void`. Those functions are `void setup` and `void loop`. What do each of them do? How do you make use of each of these functions specifically?
+
 Let's start by looking at the normal way one blinks an LED on Arduino:
 
 ```
@@ -114,6 +116,9 @@ void loop()
 ```
 
 # scaling up
+
+A few issues in the above:
+* if we need more than one timer, we will have to duplicate a large amount of variables (which ones would we need to duplicate?). Since this would lead to a lot of unnecessary typing, and part of the reason we are learning this stuff is to be smart about how lazy we are, we need to find a different approach to blink two LED's via two separate timers.
 
 Here is one solution to converting our  `millis()` timer into a reusable function. It uses a totally different design pattern than what we have been looking at in Arduino, so take some time to try to figure it out/play with it. How does this work?
 
