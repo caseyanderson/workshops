@@ -47,7 +47,7 @@ Here is a list of questions I ask myself when I am wondering if I need to learn 
 2. how reusable is this new language going to be for subsequent projects? Is it a DSL that I will likely only be able to use for this one particular task?
 3. Is there a substantial benefit for using language x over language y for my application or am I simply considering using language y because I saw something cool made in it / know someone else who uses it and thinks not using it is stupid?
 
-Example code per a handful of different languages:
+### Example code per a handful of different languages:
 
 NTK - http://www.netlabtoolkit.org/
 
