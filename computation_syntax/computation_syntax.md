@@ -50,10 +50,17 @@ Here is a list of questions I ask myself when I am wondering if I need to learn 
 Example code per a handful of different languages:
 
 NTK - http://www.netlabtoolkit.org/
+
 Arduino (basically Java) - http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense
+
 Processing (basically Java) - https://processing.org/tutorials/pvector/
+
 Procedural Python - https://github.com/caseyanderson/ask_gertrude/blob/master/ask_gertrude_v7.py
+
 openCV (python) - https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html#matcher
+
 openFrameworks (C++) - http://openframeworks.cc/tutorials/03_graphics/generativemesh/
+
 C - http://www.cprogramming.com/tutorial/c/lesson8.html
+
 SuperCollider - CTA provides example from local machine
