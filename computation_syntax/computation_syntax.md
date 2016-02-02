@@ -1,11 +1,11 @@
 ## Syntax in Computation
 Casey Anderson, 2016
 
-There are two general categories of programming languages: General-Purpose Languages (frequently abbreviated to GPL) and Domain-Specific Languages (DSL).
+There are two basic categories of programming languages: `General-Purpose Languages` (frequently abbreviated to `GPL`) and `Domain-Specific Languages` (`DSL`).
 
 ### GPL vs DSL
 
-`Domain-Specific Languages` are programming languages that are written for a specific purpose. `HTML` is a good example, as it was written exclusively for formatting text on a webpage.
+`Domain-Specific Languages` are programming languages that are written for a specific purpose. `HTML` is a good example of a `DSL` that everyone in the department uses regularly.
 
 `General-Purpose Languages` are written to support a wide variety of needs. In other words, languages that fall into this category are written to allow the user to write applications for a number of different contexts. For example, one could make a Library database (to keep track of who has been lent what book) in `Java`, though `Java` was not created specifically for public libraries.
 
@@ -29,6 +29,8 @@ A `low-level` programming language does not abstract away the nuts-and-bolts of 
 
 * [Processing](https://processing.org/) - Based on the same framework as Arduino (Wiring), Processing is a high-level visual programming environment. Processing is used for a variety of visual
 
+* [SuperCollider](https://supercollider.github.io/) - A high-level, domain specific language for algorithmic and live electronic music composition and sound design.
+
 MDP has carefully curated which programming languages make sense to support given the style of work in the department. Our preference has been to focus on high-level, general purpose programming languages. These languages all have a good balance between high-level functionality while also allowing one to go "lower" if necessary / desired.
 
 ### Choosing a Programming Language
@@ -42,5 +44,16 @@ I do not find such conversations particularly productive, but the basic thread h
 Here is a list of questions I ask myself when I am wondering if I need to learn a new language:
 
 1. am I sure that what I need to do cannot be accomplished in languages I already know?
-2. how portable, or reusable, is this new language going to be? Is it a DSL that I will likely only be able to use for this one particular task?
+2. how reusable is this new language going to be for subsequent projects? Is it a DSL that I will likely only be able to use for this one particular task?
 3. Is there a substantial benefit for using language x over language y for my application or am I simply considering using language y because I saw something cool made in it / know someone else who uses it and thinks not using it is stupid?
+
+Example code per a handful of different languages:
+
+NTK - http://www.netlabtoolkit.org/
+Arduino (basically Java) - http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense
+Processing (basically Java) - https://processing.org/tutorials/pvector/
+Procedural Python - https://github.com/caseyanderson/ask_gertrude/blob/master/ask_gertrude_v7.py
+openCV (python) - https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_feature2d/py_matcher/py_matcher.html#matcher
+openFrameworks (C++) - http://openframeworks.cc/tutorials/03_graphics/generativemesh/
+C - http://www.cprogramming.com/tutorial/c/lesson8.html
+SuperCollider - CTA provides example from local machine
