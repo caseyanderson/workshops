@@ -12,7 +12,7 @@ Materia: http://materia.nl/
 
 ### Taxonomies
 
-Over the next 45 minutes explore and analyze the Material Connexion, McMaster Carr, and Materia databases, paying special attention to the language used in each site's respective taxonomy. A taxonomy is a categorization system, but each of the above taxonomies shows one or many biases towards what is and isn't important regarding differences in material. Start by comparing the different search tools on each site. Are there ways you can look at materials in Material Connexion, for example, that are both unique to this site as well as lead to a similarly unique perspective on materiality? We will discuss your findings at the end of the 45 minute period.
+Explore and analyze the Material Connexion, McMaster Carr, and Materia databases, paying special attention to the language used in each site's respective taxonomy. A taxonomy is a categorization system, but each of the above taxonomies shows one or many biases towards what is and isn't important regarding differences in material. Start by comparing the different search tools on each site. Are there ways you can look at materials in Material Connexion, for example, that are both unique to this site as well as lead to a similarly unique perspective on materiality? We will discuss your findings at the end of the 45 minute period.
 
 ### Creating Your Own Material Taxonomy
 
