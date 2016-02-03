@@ -21,3 +21,7 @@ What should be included in a Field-oriented materials taxonomy? What should be e
 ### Studio Scavenger Hunt
 
 You will have 30 minutes to find an exemplary material, already in the studio, that fits your newly-created, Field-oriented taxonomy from the previous step. Come up with at least ten different uses for this material that take advantage of its unique properties. The unique properties you highlight should be reflected in your taxonomy as well. We will present and discuss as a group at the end of the 30 minute period.
+
+### Assignment
+
+Go to CMTEL
