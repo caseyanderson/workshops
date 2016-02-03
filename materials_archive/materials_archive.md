@@ -1,10 +1,10 @@
 ## Materials Archive
 Casey Anderson, 2016
 
-#### Important links
+####  Links
 Color, Materials, and Trends Exploration Laboratory (CMTEL): http://artcenter.edu/cmtel/
 
-Material Connexion: Inside > Library > Online Resources > COLOR, MATERIALS, FASHION & TRENDS > Material Connexion
+Material Connexion: Inside Art Center > Library > Online Resources > COLOR, MATERIALS, FASHION & TRENDS > Material Connexion
 
 McMaster Carr: http://www.mcmaster.com/
 
@@ -16,8 +16,8 @@ Over the next 45 minutes explore and analyze the Material Connexion, McMaster Ca
 
 ### Creating Your Own Material Taxonomy
 
-What should be included in a Field-oriented materials taxonomy? What should be excluded? Using what you gleaned through analysis from the three sample sites, construct a sample materials taxonomy that is more appropriate to field work, embedding one's self in a community, social justice etc.. Be prepared to discuss and defend your conclusions after 30 minutes.
+What should be included in a Field-oriented materials taxonomy? What should be excluded? Using what you gleaned through analysis from the three sample sites, construct a sample materials taxonomy that is more appropriate to field work, embedding one's self in a community, etc.. We will discuss and defend your conclusions after 30 minutes.
 
 ### Studio Scavenger Hunt
 
-You will have 30 minutes to find an exemplary material, already in the studio, that fits your newly-created Field-oriented taxonomy from the previous step. Come up with at least ten different uses for this material that take advantage of its unique properties. The unique properties you highlight should be reflected in your taxonomy as well. We will present and discuss as a group at the end of the 30 minute period.
+You will have 30 minutes to find an exemplary material, already in the studio, that fits your newly-created, Field-oriented taxonomy from the previous step. Come up with at least ten different uses for this material that take advantage of its unique properties. The unique properties you highlight should be reflected in your taxonomy as well. We will present and discuss as a group at the end of the 30 minute period.
