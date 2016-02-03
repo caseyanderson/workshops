@@ -6,9 +6,9 @@ Color, Materials, and Trends Exploration Laboratory (CMTEL): http://artcenter.ed
 
 Material Connexion: Inside Art Center > Library > Online Resources > COLOR, MATERIALS, FASHION & TRENDS > Material Connexion
 
-McMaster Carr: http://www.mcmaster.com/
+Materia: Inside Art Center > Library > Online Resources > COLOR, MATERIALS, FASHION & TRENDS > Materia
 
-Materia: http://materia.nl/
+McMaster Carr: http://www.mcmaster.com/
 
 ### Taxonomies
 
