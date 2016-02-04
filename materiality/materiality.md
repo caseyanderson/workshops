@@ -16,7 +16,7 @@ Explore and analyze the Material Connexion, McMaster Carr, and Materia databases
 
 ### Creating Your Own Material Taxonomy
 
-What should be included in a Field-oriented materials taxonomy? What should be excluded? Using what you gleaned through analysis from the three sample sites, construct a sample materials taxonomy that is more appropriate to field work, embedding one's self in a community, etc.. We will discuss and defend your conclusions after 30 minutes.
+What should be included in a Field-oriented materials taxonomy? What should be excluded? Using what you gleaned through analysis from the three sample sites, construct a sample materials taxonomy that is more appropriate to field work, embedding one's self in a community, etc.. We will discuss your conclusions after 30 minutes.
 
 ### Studio Scavenger Hunt
 
