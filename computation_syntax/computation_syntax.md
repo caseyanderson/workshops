@@ -19,7 +19,7 @@ A `low-level` programming language does not abstract away the nuts-and-bolts of 
 
 ### Languages supported by MDP
 
-* [NTK](http://www.netlabtoolkit.org/) - A high-level graphical programming environment by Phil van Allan. Everyone in MDP gets at least some experience using this platform, an exemplary introduction to programming that is powerful enough to become one's main tool.
+* [NTK](http://www.netlabtoolkit.org/) - A high-level graphical programming environment by Phil van Allen. Everyone in MDP gets at least some experience using this platform, an exemplary introduction to programming that is powerful enough to become one's main tool.
 
 * [Arduino](https://www.arduino.cc/) - A high level general purpose software/hardware platform for interfacing with electronics.
 
