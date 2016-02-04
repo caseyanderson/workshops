@@ -27,7 +27,7 @@ A `low-level` programming language does not abstract away the nuts-and-bolts of 
 
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - A high level programming language that currently dominates the web. We use JavaScript for everything from responsive websites to IoT, but you could also do video and some limited audio work with this language.
 
-* [Processing](https://processing.org/) - Based on the same framework as Arduino (Wiring), Processing is a high-level visual programming environment. Processing is used for a variety of visual
+* [Processing](https://processing.org/) - Based on the same framework as Arduino (Wiring), Processing is a high-level visual programming environment.
 
 * [SuperCollider](https://supercollider.github.io/) - A high-level, domain specific language for algorithmic and live electronic music composition and sound design.
 
