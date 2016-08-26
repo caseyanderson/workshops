@@ -10,4 +10,4 @@
 
 ### Discussion
 
-If you wanted to design a robot capable of walking from point A to point B, what things would it need to be able to do
+If you wanted to design a robot capable of walking from point A to point B, what things would it need to be able to do?
