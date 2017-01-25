@@ -62,4 +62,13 @@ for i in speech:
 # converts list items to one long string
 allofspeech = ''.join(text)
 
-##
+# print the article body by entering the following in the terminal
+allofspeech
+
+# notice that we have some of the introduction, which we dont actually need. Trump's speech starts with the word Chief, so lets use the Python str.find() method to see what index the word Chief begins at...
+allofspeech.find('Chief')
+
+# returns 457, im going to guess that the speech can start at 456 and see what happens
+justspeech = allofspeech[456:]
+
+# which returns the body of the article without the intro!
