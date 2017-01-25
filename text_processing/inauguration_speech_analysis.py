@@ -31,3 +31,35 @@ print(soup.prettify())
 
 # example img
 # here i see lots of code but not the full text of the inauguration speech, which is what i want
+
+# so the tag im looking for is p
+speech = soup.find('p')
+
+j = 0
+
+for i in speech:
+    print('step number ' + str(j))
+    print(i)
+    j+=1
+
+
+
+speech = soup.find_all('p')
+
+# has a newline problem
+
+text = []
+
+for i in speech:
+    text.append(i.text)
+
+
+# doesnt have a newline problem
+
+for i in speech:
+    text.append((i.text).strip())
+
+# converts list items to one long string
+allofspeech = ''.join(text)
+
+##
